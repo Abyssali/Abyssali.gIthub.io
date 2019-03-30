@@ -104,7 +104,7 @@
 <meta property="og:site_name" content="深海">
 <meta property="og:description" content="所需环境nodeJs 快速安装 1brew install node 1.创建GitHub仓库在 github 上创建名称为 xxxx.github.io 的 repository 2.初始化本地博客在本地创建一个文件夹来保存博客, 我这里创建在这里 1$ mkdir -p ~/code/github/blog 创建文件夹后初始化hexo到这里 123$ cd ~/code/github/blog">
 <meta property="og:locale" content="zh_Hans">
-<meta property="og:updated_time" content="2019-03-30T12:37:35.592Z">
+<meta property="og:updated_time" content="2019-03-30T12:38:48.435Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="github pages + hexo快速教程">
 <meta name="twitter:description" content="所需环境nodeJs 快速安装 1brew install node 1.创建GitHub仓库在 github 上创建名称为 xxxx.github.io 的 repository 2.初始化本地博客在本地创建一个文件夹来保存博客, 我这里创建在这里 1$ mkdir -p ~/code/github/blog 创建文件夹后初始化hexo到这里 123$ cd ~/code/github/blog">
@@ -350,7 +350,7 @@
                 
               
 
-              <time title="Created: 2019-03-30 19:31:10 / Modified: 20:37:35" itemprop="dateCreated datePublished" datetime="2019-03-30T19:31:10+08:00">2019-03-30</time>
+              <time title="Created: 2019-03-30 19:31:10 / Modified: 20:38:48" itemprop="dateCreated datePublished" datetime="2019-03-30T19:31:10+08:00">2019-03-30</time>
             
 
             
@@ -400,7 +400,7 @@
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
 <p>本地预览地址:  <a href="localhost:4000" target="_blank" rel="noopener">localhost:4000</a> </p>
 <h4 id="3-推送本地博客到-Github"><a href="#3-推送本地博客到-Github" class="headerlink" title="3.推送本地博客到 Github"></a>3.推送本地博客到 Github</h4><p>此时的文件夹目录如下：（<a href="https://hexo.io/zh-cn/docs/configuration#%E7%9B%AE%E5%BD%95" target="_blank" rel="noopener">点我</a>看各文件夹具体作用）</p>
-<figure class="highlight tex"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">.</span><br><span class="line">├── _config.yml</span><br><span class="line">├── package.json</span><br><span class="line">├── scaffolds</span><br><span class="line">├── source</span><br><span class="line">|   ├── _drafts</span><br><span class="line">|   └── _posts</span><br><span class="line">└── themes</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">.</span><br><span class="line">├── _config.yml    </span><br><span class="line">├── package.json    </span><br><span class="line">├── scaffolds    </span><br><span class="line">├── source    </span><br><span class="line">|   ├── _drafts    </span><br><span class="line">|   └── _posts    </span><br><span class="line">└── themes</span><br></pre></td></tr></table></figure>
 <p>修改 <code>_config.yml</code> 中的 <code>deploy</code> 将本地博客与刚创建的 github 仓库关联起来</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">$ vim _config.yml</span><br><span class="line"></span><br><span class="line"><span class="comment"># 翻到文件最后将自己的仓库添加到 deploy</span></span><br><span class="line">deploy:</span><br><span class="line">  <span class="built_in">type</span>: git</span><br><span class="line">  repo: https://github.com/Abyssali/Abyssali.github.io.git</span><br><span class="line">  branch: master</span><br></pre></td></tr></table></figure>
 <p>添加完配置之后，就可以将将本地博客推送到 github, hexo 提供了很方便的工具来做这个</p>
