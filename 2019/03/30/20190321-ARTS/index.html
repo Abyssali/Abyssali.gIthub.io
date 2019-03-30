@@ -96,13 +96,19 @@
 
 
 
-  <meta property="og:type" content="website">
-<meta property="og:title" content="深海">
-<meta property="og:url" content="http://yoursite.com/index.html">
+  <meta name="description" content="20190321-ARTSAlgorithm771. Jewels and Stones 12345678910111213141516171819You&amp;apos;re given strings J representing the types of stones that are jewels, and S representing the stones you have.  Each ch">
+<meta property="og:type" content="article">
+<meta property="og:title" content="20190321-ARTS">
+<meta property="og:url" content="http://yoursite.com/2019/03/30/20190321-ARTS/index.html">
 <meta property="og:site_name" content="深海">
+<meta property="og:description" content="20190321-ARTSAlgorithm771. Jewels and Stones 12345678910111213141516171819You&amp;apos;re given strings J representing the types of stones that are jewels, and S representing the stones you have.  Each ch">
 <meta property="og:locale" content="zh_cn">
+<meta property="og:image" content="https://cdn.nlark.com/yuque/0/2019/png/292482/1553183977473-4a6ae604-6ef9-42ac-b20a-33dd7abf168e.png#align=left&display=inline&height=530&name=image.png&originHeight=1056&originWidth=908&size=678686&status=done&width=456">
+<meta property="og:updated_time" content="2019-03-30T09:52:49.854Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="深海">
+<meta name="twitter:title" content="20190321-ARTS">
+<meta name="twitter:description" content="20190321-ARTSAlgorithm771. Jewels and Stones 12345678910111213141516171819You&amp;apos;re given strings J representing the types of stones that are jewels, and S representing the stones you have.  Each ch">
+<meta name="twitter:image" content="https://cdn.nlark.com/yuque/0/2019/png/292482/1553183977473-4a6ae604-6ef9-42ac-b20a-33dd7abf168e.png#align=left&display=inline&height=530&name=image.png&originHeight=1056&originWidth=908&size=678686&status=done&width=456">
 
 
 
@@ -110,7 +116,7 @@
 
   
   
-  <link rel="canonical" href="http://yoursite.com/">
+  <link rel="canonical" href="http://yoursite.com/2019/03/30/20190321-ARTS/">
 
 
 
@@ -120,7 +126,7 @@
   };
 </script>
 
-  <title>深海</title>
+  <title>20190321-ARTS | 深海</title>
   
 
 
@@ -168,8 +174,7 @@
     
   
 
-  <div class="container sidebar-position-left 
-  page-home">
+  <div class="container sidebar-position-left page-post-detail">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -207,7 +212,7 @@
         
         
           
-          <li class="menu-item menu-item-home menu-item-active">
+          <li class="menu-item menu-item-home">
 
     
     
@@ -303,9 +308,9 @@
           
           <div id="content" class="content">
             
-  <section id="posts" class="posts-expand">
+
+  <div id="posts" class="posts-expand">
     
-      
 
   
 
@@ -337,10 +342,8 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">
-                
-                
-                <a href="/2019/03/30/20190321-ARTS/" class="post-title-link" itemprop="url">20190321-ARTS</a>
+          <h1 class="post-title" itemprop="name headline">20190321-ARTS
+
               
             
           </h1>
@@ -404,9 +407,7 @@
       
 
       
-        
-          
-            <h1 id="20190321-ARTS"><a href="#20190321-ARTS" class="headerlink" title="20190321-ARTS"></a>20190321-ARTS</h1><h2 id="Algorithm"><a href="#Algorithm" class="headerlink" title="Algorithm"></a>Algorithm</h2><p><a href="https://leetcode.com/problems/jewels-and-stones/" target="_blank" rel="noopener">771. Jewels and Stones</a></p>
+        <h1 id="20190321-ARTS"><a href="#20190321-ARTS" class="headerlink" title="20190321-ARTS"></a>20190321-ARTS</h1><h2 id="Algorithm"><a href="#Algorithm" class="headerlink" title="Algorithm"></a>Algorithm</h2><p><a href="https://leetcode.com/problems/jewels-and-stones/" target="_blank" rel="noopener">771. Jewels and Stones</a></p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">You&apos;re given strings J representing the types of stones that are jewels, </span><br><span class="line">and S representing the stones you have.  Each character in S is a type of stone you have.</span><br><span class="line">You want to know how many of the stones you have are also jewels.</span><br><span class="line"></span><br><span class="line">The letters in J are guaranteed distinct, and all characters in J and S are letters.</span><br><span class="line">Letters are case sensitive, so &quot;a&quot; is considered a different type of stone from &quot;A&quot;.</span><br><span class="line"></span><br><span class="line">Example 1:</span><br><span class="line"></span><br><span class="line">Input: J = &quot;aA&quot;, S = &quot;aAAbbbb&quot;</span><br><span class="line">Output: 3</span><br><span class="line">Example 2:</span><br><span class="line"></span><br><span class="line">Input: J = &quot;z&quot;, S = &quot;ZZ&quot;</span><br><span class="line">Output: 0</span><br><span class="line">Note:</span><br><span class="line"></span><br><span class="line">S and J will consist of letters and have length at most 50.</span><br><span class="line">The characters in J are distinct.</span><br></pre></td></tr></table></figure>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">numJewelsInStones</span><span class="params">(String J, String S)</span> </span>&#123;</span><br><span class="line">    </span><br><span class="line">        <span class="keyword">int</span> result = <span class="number">0</span>;</span><br><span class="line"></span><br><span class="line">        Set&lt;Character&gt; jewels = <span class="keyword">new</span> HashSet&lt;Character&gt;();</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">char</span> j : J.toCharArray()) &#123;</span><br><span class="line">            jewels.add(j);</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">char</span> s : S.toCharArray()) &#123;</span><br><span class="line">            <span class="keyword">if</span> (jewels.contains(s)) result++;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">return</span> result;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <p>没怎么做过leetcode，所以先从简单的题目开始了，这道题的思路就是将宝石字符串（Jewel）转为单个字符后存在易于查询的地方，再将石头字符串（Stone）转为 字符数组后遍历即可，在别人的分享中看到了比较有意思的答案，<br>比如：一行代码完成解题：主要思路是使用正则表达式(正则原来还能这么用，学到了！）</p>
@@ -419,8 +420,6 @@
 <h2 id="Tips"><a href="#Tips" class="headerlink" title="Tips"></a>Tips</h2><p>分享一个小技巧<br>现在交流使用表情越来越频繁了，每次都需要鼠标打开emoji表情页面很麻烦，找了找mac居然还有这个快捷键：<br><strong>control + command + space      -直接打开emoji！</strong><br><strong><br><img src="https://cdn.nlark.com/yuque/0/2019/png/292482/1553183977473-4a6ae604-6ef9-42ac-b20a-33dd7abf168e.png#align=left&amp;display=inline&amp;height=530&amp;name=image.png&amp;originHeight=1056&amp;originWidth=908&amp;size=678686&amp;status=done&amp;width=456" alt="image.png"></strong><br>哈哈以后输入emoji更方便了！<br>**<br><a name="Share"></a></p>
 <h2 id="Share"><a href="#Share" class="headerlink" title="Share"></a>Share</h2><p>分享一篇有观点和思考的技术文章。<br>说到分享，我想起了垠神，看了他很多文章，确实有些观点是很不错的， 先分享一篇 <a href="http://www.yinwang.org/blog-cn/2017/07/06/master-pl" target="_blank" rel="noopener">如何掌握所有的程序语言</a><br>自己从这边文章中学到不少，有空还可以再翻翻垠神的旧文</p>
 
-          
-        
       
     </div>
 
@@ -443,158 +442,28 @@
       
 
       
-
-      
-
       
       
-        <div class="post-eof"></div>
+
       
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/03/30/左耳听风ARTS/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="abyssal">
-      <meta itemprop="description" content>
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="深海">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                
-                <a href="/2019/03/30/左耳听风ARTS/" class="post-title-link" itemprop="url">左耳听风ARTS</a>
-              
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
             
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-
+              <a href="/2019/03/30/左耳听风ARTS/" rel="next" title="左耳听风ARTS">
+                <i class="fa fa-chevron-left"></i> 左耳听风ARTS
+              </a>
             
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
             
-            
-
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-
-              
-                
-              
-
-              <time title="Created: 2019-03-30 17:42:00 / Modified: 17:53:19" itemprop="dateCreated datePublished" datetime="2019-03-30T17:42:00+08:00">2019-03-30</time>
-            
-
-            
-              
-
-              
-            
-          </span>
-
-          
-
-          
-            
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
+          </div>
         </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
       
 
       
-        
-          
-            <h1 id="左耳听风ARTS"><a href="#左耳听风ARTS" class="headerlink" title="左耳听风ARTS"></a>左耳听风ARTS</h1><h2 id="A-Algorithm"><a href="#A-Algorithm" class="headerlink" title="A - Algorithm"></a>A - Algorithm</h2><p>每周一道算法题，<a href="https://leetcode.com" target="_blank" rel="noopener">leetcode</a> </p>
-<h2 id="R-Review"><a href="#R-Review" class="headerlink" title="R - Review"></a>R - Review</h2><p>每周阅读并点评一篇英文技术文章，<a href="https://medium.com" target="_blank" rel="noopener">medium</a> </p>
-<h2 id="T-Tips"><a href="#T-Tips" class="headerlink" title="T - Tips"></a>T - Tips</h2><p>每周学习一个小技巧</p>
-<h2 id="S-Share"><a href="#S-Share" class="headerlink" title="S - Share"></a>S - Share</h2><p>每周输出自己的观点</p>
-
-          
-        
-      
-    </div>
-
-    
-
-    
-    
-    
-
-    
-
-    
-      
-    
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
       
     </footer>
   </div>
@@ -604,14 +473,15 @@
   </article>
 
 
-    
-  </section>
-
-  
+  </div>
 
 
           </div>
           
+
+  
+
+
 
         </div>
         
@@ -631,8 +501,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            Table of Contents
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            Overview
+          </li>
+        </ul>
+      
 
-      <div class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <div class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -691,6 +570,23 @@
         </div>
       </div>
 
+      
+      <!--noindex-->
+        <div class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+            
+            
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#20190321-ARTS"><span class="nav-number">1.</span> <span class="nav-text">20190321-ARTS</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Algorithm"><span class="nav-number">1.1.</span> <span class="nav-text">Algorithm</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Review"><span class="nav-number">1.2.</span> <span class="nav-text">Review</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#What-Is-Readable-Code"><span class="nav-number">1.2.0.1.</span> <span class="nav-text">What Is Readable Code?</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Tips"><span class="nav-number">1.3.</span> <span class="nav-text">Tips</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Share"><span class="nav-number">1.4.</span> <span class="nav-text">Share</span></a></li></ol></div>
+            
+
+          </div>
+        </div>
+      <!--/noindex-->
       
 
       
@@ -819,6 +715,10 @@
 
 
   
+  <script src="/js/src/scrollspy.js?v=7.0.1"></script>
+<script src="/js/src/post-details.js?v=7.0.1"></script>
+
+
 
   
 
@@ -834,6 +734,8 @@
 
   
 
+
+  
 
 
   
