@@ -15,7 +15,7 @@
 <meta property="og:description" content="最近在学习 docker，其中提到了 docker 是依赖于 namespace的，而学习了解 namespace时了解到到namesapce本质是资源隔离，而 Linux 中实现资源隔离还有 chroot这种方式，所以学习一下 chroot 什么是 chroot ？chroot 即为 &amp;#39;change root dictionary&amp;#39; 更改 root 目录。在 linux 系统中，">
 <meta property="og:locale" content="en">
 <meta property="og:image" content="https://raw.githubusercontent.com/Abyssali/Abyssali.github.io/master/images/image-20190429161045048.png">
-<meta property="og:updated_time" content="2019-04-29T09:21:32.152Z">
+<meta property="og:updated_time" content="2019-04-29T09:26:38.654Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="chroot 简介">
 <meta name="twitter:description" content="最近在学习 docker，其中提到了 docker 是依赖于 namespace的，而学习了解 namespace时了解到到namesapce本质是资源隔离，而 Linux 中实现资源隔离还有 chroot这种方式，所以学习一下 chroot 什么是 chroot ？chroot 即为 &amp;#39;change root dictionary&amp;#39; 更改 root 目录。在 linux 系统中，">
@@ -150,7 +150,7 @@
 
   <div class="content" itemprop="articleBody">
     <p>最近在学习 <code>docker</code>，其中提到了 <code>docker</code> 是依赖于 <code>namespace</code>的，而学习了解 <code>namespace</code>时了解到到<code>namesapce</code>本质是资源隔离，而 Linux 中实现资源隔离还有 <code>chroot</code>这种方式，所以学习一下 <code>chroot</code></p>
-<h4 id="什么是-chroot-？"><a href="#什么是-chroot-？" class="headerlink" title="什么是 chroot ？"></a>什么是 <code>chroot</code> ？</h4><p><code>chroot</code> 即为 <code>&#39;change root dictionary&#39;</code> 更改 root 目录。在 linux 系统中，系统默认的根目录是 <code>/</code></p>
+<h4 id="什么是-chroot-？"><a href="#什么是-chroot-？" class="headerlink" title="什么是 chroot ？"></a>什么是 <code>chroot</code> ？</h4><p><code>chroot</code> 即为 <code>&#39;change root dictionary&#39;</code> 更改 root 目录。在 linux 系统中，系统默认的根目录是 <code>/</code>，(通过修改根目录把用户<code>jail</code>到一个特定目录下)</p>
 <p><strong>而在使用 <code>chroot</code>之后，系统的目录结构将以指定的位置作为 <code>/</code> 位置。</strong></p>
 <p>图：Linux 的系统目录结构</p>
 <p><img src="https://raw.githubusercontent.com/Abyssali/Abyssali.github.io/master/images/image-20190429161045048.png" alt="image-20190429161045048"></p>

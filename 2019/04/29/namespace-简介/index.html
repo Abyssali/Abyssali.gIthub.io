@@ -6,17 +6,18 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="HandheldFriendly" content="True">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-    <meta name="description" content="我登楼观百川,入海即入我怀.">
+    <meta name="description" content="Namespace是什么简介Namespace是 Linux 提供的一种内核级别环境隔离的方法，Linux 中还有一种简单的隔离模式chroot (通过修改系统根目录把用户jail到一个特定的目录下)，Linux Namespace在此基础上，提供了对 UST、IPC、mount、PID、network、User 等的隔离机制 Linux Namespace 有以下几类，官方文档《Namespac">
+<meta name="keywords" content="linux">
 <meta property="og:type" content="article">
 <meta property="og:title" content="namespace 简介">
 <meta property="og:url" content="http://yoursite.com/2019/04/29/namespace-简介/index.html">
 <meta property="og:site_name" content="Abyssal">
-<meta property="og:description" content="我登楼观百川,入海即入我怀.">
+<meta property="og:description" content="Namespace是什么简介Namespace是 Linux 提供的一种内核级别环境隔离的方法，Linux 中还有一种简单的隔离模式chroot (通过修改系统根目录把用户jail到一个特定的目录下)，Linux Namespace在此基础上，提供了对 UST、IPC、mount、PID、network、User 等的隔离机制 Linux Namespace 有以下几类，官方文档《Namespac">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2019-04-29T06:52:45.979Z">
+<meta property="og:updated_time" content="2019-04-29T10:54:51.334Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="namespace 简介">
-<meta name="twitter:description" content="我登楼观百川,入海即入我怀.">
+<meta name="twitter:description" content="Namespace是什么简介Namespace是 Linux 提供的一种内核级别环境隔离的方法，Linux 中还有一种简单的隔离模式chroot (通过修改系统根目录把用户jail到一个特定的目录下)，Linux Namespace在此基础上，提供了对 UST、IPC、mount、PID、network、User 等的隔离机制 Linux Namespace 有以下几类，官方文档《Namespac">
     
     
         
@@ -100,7 +101,7 @@
 
     </div>
     <div id="toc">
-      
+      <ol class="toc"><li class="toc-item toc-level-4"><a class="toc-link" href="#Namespace是什么"><span class="toc-number">1.</span> <span class="toc-text">Namespace是什么</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#简介"><span class="toc-number">1.1.</span> <span class="toc-text">简介</span></a></li></ol></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Namespace有什么用"><span class="toc-number">2.</span> <span class="toc-text">Namespace有什么用</span></a></li></ol>
     </div>
   </span>
 </div>
@@ -133,13 +134,73 @@
       
 
       
+    <div class="article-tag">
+        <i class="fas fa-tag"></i>
+        <a class="tag-link" href="/tags/linux/">linux</a>
+    </div>
+
 
     </div>
   </header>
   
 
   <div class="content" itemprop="articleBody">
-    
+    <h4 id="Namespace是什么"><a href="#Namespace是什么" class="headerlink" title="Namespace是什么"></a><code>Namespace</code>是什么</h4><h5 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h5><p><code>Namespace</code>是 Linux 提供的一种内核级别环境隔离的方法，Linux 中还有一种简单的隔离模式<code>chroot</code> (通过修改系统根目录把用户<code>jail</code>到一个特定的目录下)，Linux <code>Namespace</code>在此基础上，提供了对 UST、IPC、mount、PID、network、User 等的隔离机制</p>
+<p>Linux <code>Namespace</code> 有<strong>以下几类</strong>，官方文档<a href="https://lwn.net/Articles/531114/" target="_blank" rel="noopener">《Namespace in Operation》</a></p>
+<table>
+<thead>
+<tr>
+<th>分类</th>
+<th>系统调用参数</th>
+<th>相关内核版本</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Mount namespaces</td>
+<td>CLONE_NEWNS</td>
+<td><a href="http://lwn.net/2001/0301/a/namespaces.php3" target="_blank" rel="noopener">Linux 2.4.19</a></td>
+</tr>
+<tr>
+<td>UTS namespace</td>
+<td>CLONE_NEWUTS</td>
+<td><a href="https://lwn.net/Articles/179345/" target="_blank" rel="noopener">Linux 2.6.19</a></td>
+</tr>
+<tr>
+<td>IPC namespaces</td>
+<td>CLONE_NEWIPC</td>
+<td><a href="https://lwn.net/Articles/179345/" target="_blank" rel="noopener">Linux 2.6.19</a></td>
+</tr>
+<tr>
+<td>PID namespaces</td>
+<td>CLONE_NEWPID</td>
+<td><a href="https://lwn.net/Articles/259217/" target="_blank" rel="noopener">Linux 2.6.24</a></td>
+</tr>
+<tr>
+<td>Network namespaces</td>
+<td>CLONE_NEWNET</td>
+<td>始于Linux 2.6.24 完成与Linux 2.6.29</td>
+</tr>
+<tr>
+<td>User namespaces</td>
+<td>CLONE_NEWUSER</td>
+<td>始于Linux 2.6.23 完成与Linux 3.8</td>
+</tr>
+</tbody>
+</table>
+<p>可以看到系统调用的参数都是<code>CLONE_NEW**</code>，实际主要是 三个系统调用：</p>
+<ul>
+<li><code>clone()</code> - 实现线程的系统调用，用来创建一个新进程 <a href="http://man7.org/linux/man-pages/man2/clone.2.html" target="_blank" rel="noopener"><code>man page</code></a> ，并可以通过设计上述参数达到隔离的目的。</li>
+<li><code>unshare()</code> - 使某个进程脱离某个<code>namespace</code>，<a href="http://man7.org/linux/man-pages/man1/unshare.1.html" target="_blank" rel="noopener"><code>man page</code></a></li>
+<li><code>setns()</code> - 把某个进程加入到某个 <code>namespace</code> ，<a href="http://man7.org/linux/man-pages/man2/setns.2.html" target="_blank" rel="noopener"><code>man page</code></a></li>
+</ul>
+<p><code>unshare()</code> 和 <code>setns()</code> 都很简单, 直接参考 <code>man page</code> 即可</p>
+<h4 id="Namespace有什么用"><a href="#Namespace有什么用" class="headerlink" title="Namespace有什么用"></a><code>Namespace</code>有什么用</h4><p>参考资料：</p>
+<ol>
+<li><a href="https://coolshell.cn/articles/17010.html" target="_blank" rel="noopener">《Docker 基础技术：Linux Namespace(上)》</a></li>
+<li><a href="https://coolshell.cn/articles/17029.html" target="_blank" rel="noopener">《Docker 基础技术：Linux Namespace(下)》</a></li>
+</ol>
+
   </div>
 </article>
 
@@ -164,7 +225,7 @@
     </div>
 
     <div id="toc-footer" style="display: none">
-      
+      <ol class="toc"><li class="toc-item toc-level-4"><a class="toc-link" href="#Namespace是什么"><span class="toc-number">1.</span> <span class="toc-text">Namespace是什么</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#简介"><span class="toc-number">1.1.</span> <span class="toc-text">简介</span></a></li></ol></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Namespace有什么用"><span class="toc-number">2.</span> <span class="toc-text">Namespace有什么用</span></a></li></ol>
     </div>
 
     <div id="share-footer" style="display: none">
