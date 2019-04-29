@@ -14,7 +14,7 @@
 <meta property="og:site_name" content="Abyssal">
 <meta property="og:description" content="cgroup是什么前面，我们介绍了Linux Namespace)，但是Namespace解决的问题主要是环境隔离的问题，这只是虚拟化中最最基础的一步，我们还需要解决对计算机资源使用上的隔离。也就是说，虽然你通过Namespace把我Jail到一个特定的环境中去了，但是我在其中的进程使用用CPU、内存、磁盘等这些计算资源其实还是可以随心所欲的。所以，我们希望对进程进行资源利用上的限制或控制。这就是">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2019-04-29T11:25:17.307Z">
+<meta property="og:updated_time" content="2019-04-29T11:26:43.015Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Docker 基础技术：cgroup 学习">
 <meta name="twitter:description" content="cgroup是什么前面，我们介绍了Linux Namespace)，但是Namespace解决的问题主要是环境隔离的问题，这只是虚拟化中最最基础的一步，我们还需要解决对计算机资源使用上的隔离。也就是说，虽然你通过Namespace把我Jail到一个特定的环境中去了，但是我在其中的进程使用用CPU、内存、磁盘等这些计算资源其实还是可以随心所欲的。所以，我们希望对进程进行资源利用上的限制或控制。这就是">
@@ -150,6 +150,7 @@
 <blockquote>
 <p>Cgroup 可让您为系统中所运行任务（进程）的用户定义组群分配资源 – 比如 CPU 时间、系统内存、网络带宽或者这些资源的组合。您可以监控您配置的 cgroup，拒绝 cgroup 访问某些资源，甚至在运行的系统中动态配置您的 cgroup。可将 <code>cgconfig</code>（“<em>控制组群配置</em> ”）服务配置为在引导时启动，并重新建立您预先定义的 cgroup，这样可使其在重启过程中保留它们。 </p>
 <p>使用 cgroup，系统管理员可更具体地控制对系统资源的分配、优先顺序、拒绝、管理和监控。可更好地根据任务和用户分配硬件资源，提高总体效率。</p>
+<p><a href="https://access.redhat.com/documentation/zh-cn/red_hat_enterprise_linux/6/html-single/resource_management_guide/index" target="_blank" rel="noopener">redhat: 资源管理指南</a></p>
 </blockquote>
 <p>主要提供了如下功能：</p>
 <ul>
