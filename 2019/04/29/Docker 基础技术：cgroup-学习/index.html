@@ -6,17 +6,17 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="HandheldFriendly" content="True">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-    <meta name="description" content="cgroup是什么参考资料：  《DOCKER基础技术：LINUX CGROUP》 Linux Kernel Cgroup Documents Reahat Resource Management Guide Fixing control groups The unified control group hierarchy in 3.16 Cgroup v2(PDF)">
+    <meta name="description" content="cgroup是什么前面，我们介绍了Linux Namespace)，但是Namespace解决的问题主要是环境隔离的问题，这只是虚拟化中最最基础的一步，我们还需要解决对计算机资源使用上的隔离。也就是说，虽然你通过Namespace把我Jail到一个特定的环境中去了，但是我在其中的进程使用用CPU、内存、磁盘等这些计算资源其实还是可以随心所欲的。所以，我们希望对进程进行资源利用上的限制或控制。这就是">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Docker 基础技术：cgroup 学习">
 <meta property="og:url" content="http://yoursite.com/2019/04/29/Docker 基础技术：cgroup-学习/index.html">
 <meta property="og:site_name" content="Abyssal">
-<meta property="og:description" content="cgroup是什么参考资料：  《DOCKER基础技术：LINUX CGROUP》 Linux Kernel Cgroup Documents Reahat Resource Management Guide Fixing control groups The unified control group hierarchy in 3.16 Cgroup v2(PDF)">
+<meta property="og:description" content="cgroup是什么前面，我们介绍了Linux Namespace)，但是Namespace解决的问题主要是环境隔离的问题，这只是虚拟化中最最基础的一步，我们还需要解决对计算机资源使用上的隔离。也就是说，虽然你通过Namespace把我Jail到一个特定的环境中去了，但是我在其中的进程使用用CPU、内存、磁盘等这些计算资源其实还是可以随心所欲的。所以，我们希望对进程进行资源利用上的限制或控制。这就是">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2019-04-29T11:12:28.734Z">
+<meta property="og:updated_time" content="2019-04-29T11:17:35.113Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Docker 基础技术：cgroup 学习">
-<meta name="twitter:description" content="cgroup是什么参考资料：  《DOCKER基础技术：LINUX CGROUP》 Linux Kernel Cgroup Documents Reahat Resource Management Guide Fixing control groups The unified control group hierarchy in 3.16 Cgroup v2(PDF)">
+<meta name="twitter:description" content="cgroup是什么前面，我们介绍了Linux Namespace)，但是Namespace解决的问题主要是环境隔离的问题，这只是虚拟化中最最基础的一步，我们还需要解决对计算机资源使用上的隔离。也就是说，虽然你通过Namespace把我Jail到一个特定的环境中去了，但是我在其中的进程使用用CPU、内存、磁盘等这些计算资源其实还是可以随心所欲的。所以，我们希望对进程进行资源利用上的限制或控制。这就是">
     
     
         
@@ -139,7 +139,27 @@
   
 
   <div class="content" itemprop="articleBody">
-    <h4 id="cgroup是什么"><a href="#cgroup是什么" class="headerlink" title="cgroup是什么"></a><code>cgroup</code>是什么</h4><p>参考资料：</p>
+    <h4 id="cgroup是什么"><a href="#cgroup是什么" class="headerlink" title="cgroup是什么"></a><code>cgroup</code>是什么</h4><p>前面，我们介绍了<a href="[https://abyssali.github.io/2019/04/29/Docker%20%E5%9F%BA%E7%A1%80%E6%8A%80%E6%9C%AF%EF%BC%9Anamespace-%E5%AD%A6%E4%B9%A0/](https://abyssali.github.io/2019/04/29/Docker 基础技术：namespace-学习/">Linux Namespace</a>)，但是Namespace解决的问题主要是环境隔离的问题，这只是虚拟化中最最基础的一步，我们还需要解决对计算机资源使用上的隔离。也就是说，虽然你通过Namespace把我Jail到一个特定的环境中去了，但是我在其中的进程使用用CPU、内存、磁盘等这些计算资源其实还是可以随心所欲的。所以，<strong>我们希望对进程进行资源利用上的限制或控制。这就是Linux CGroup出来了的原因。</strong></p>
+<p>Linux CGroup全称Linux Control Group， 是Linux内核的一个功能，用来限制，控制与分离一个进程组群的资源（如CPU、内存、磁盘输入输出等）。这个项目最早是由Google的工程师在2006年发起（主要是Paul Menage和Rohit Seth），最早的名称为进程容器（process containers）。在2007年时，因为在Linux内核中，容器（container）这个名词太过广泛，为避免混乱，被重命名为cgroup，并且被合并到2.6.24版的内核中去。然后，其它开始了他的发展。</p>
+<p>Linux CGroupCgroup 可让您<strong>为系统中所运行任务（进程）的用户定义组群分配资源</strong> — 比如 CPU 时间、系统内存、网络带宽或者这些资源的组合。您可以监控您配置的 cgroup，拒绝 cgroup 访问某些资源，甚至在运行的系统中动态配置您的 cgroup。</p>
+<p>主要提供了如下功能：</p>
+<ul>
+<li><strong>Resource limitation</strong>: 限制资源使用，比如内存使用上限以及文件系统的缓存限制。</li>
+<li><strong>Prioritization</strong>: 优先级控制，比如：CPU利用和磁盘IO吞吐。</li>
+<li><strong>Accounting</strong>: 一些审计或一些统计，主要目的是为了计费。</li>
+<li><strong>Control</strong>: 挂起进程，恢复执行进程。</li>
+</ul>
+<p>使用 cgroup，系统管理员可更具体地控制对系统资源的分配、优先顺序、拒绝、管理和监控。可更好地根据任务和用户分配硬件资源，提高总体效率。</p>
+<p>在实践中，系统管理员一般会利用CGroup做下面这些事（<strong>有点像为某个虚拟机分配资源似的</strong>）：</p>
+<ul>
+<li><strong>隔离一个进程集合</strong>（比如：nginx的所有进程），并限制他们所消费的资源，比如绑定CPU的核。</li>
+<li>为这组 进程 分配其足够使用的内存</li>
+<li>为这组进程分配相应的网络带宽和磁盘存储限制</li>
+<li>限制访问某些设备（通过设置设备的白名单）</li>
+</ul>
+<p>更多解释及示例：</p>
+<p><a href="https://coolshell.cn/articles/17049.html" target="_blank" rel="noopener">《DOCKER基础技术：LINUX CGROUP》</a></p>
+<p>参考资料：</p>
 <ol>
 <li><a href="https://coolshell.cn/articles/17049.html" target="_blank" rel="noopener">《DOCKER基础技术：LINUX CGROUP》</a></li>
 <li><a href="https://www.kernel.org/doc/Documentation/cgroups/" target="_blank" rel="noopener">Linux Kernel Cgroup Documents</a></li>
