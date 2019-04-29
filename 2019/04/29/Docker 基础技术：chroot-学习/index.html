@@ -9,15 +9,15 @@
     <meta name="description" content="最近在学习 docker，其中提到了 docker 是依赖于 namespace的，而学习了解 namespace时了解到到namesapce本质是资源隔离，而 Linux 中实现资源隔离还有 chroot这种方式，所以学习一下 chroot 什么是 chroot ？chroot 即为 &amp;#39;change root dictionary&amp;#39; 更改 root 目录。在 linux 系统中，">
 <meta name="keywords" content="linux">
 <meta property="og:type" content="article">
-<meta property="og:title" content="chroot 简介">
-<meta property="og:url" content="http://yoursite.com/2019/04/29/chroot-简介/index.html">
+<meta property="og:title" content="Docker 基础技术：chroot 学习">
+<meta property="og:url" content="http://yoursite.com/2019/04/29/Docker 基础技术：chroot-学习/index.html">
 <meta property="og:site_name" content="Abyssal">
 <meta property="og:description" content="最近在学习 docker，其中提到了 docker 是依赖于 namespace的，而学习了解 namespace时了解到到namesapce本质是资源隔离，而 Linux 中实现资源隔离还有 chroot这种方式，所以学习一下 chroot 什么是 chroot ？chroot 即为 &amp;#39;change root dictionary&amp;#39; 更改 root 目录。在 linux 系统中，">
 <meta property="og:locale" content="en">
 <meta property="og:image" content="https://raw.githubusercontent.com/Abyssali/Abyssali.github.io/master/images/image-20190429161045048.png">
-<meta property="og:updated_time" content="2019-04-29T09:26:38.654Z">
+<meta property="og:updated_time" content="2019-04-29T11:12:10.056Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="chroot 简介">
+<meta name="twitter:title" content="Docker 基础技术：chroot 学习">
 <meta name="twitter:description" content="最近在学习 docker，其中提到了 docker 是依赖于 namespace的，而学习了解 namespace时了解到到namesapce本质是资源隔离，而 Linux 中实现资源隔离还有 chroot这种方式，所以学习一下 chroot 什么是 chroot ？chroot 即为 &amp;#39;change root dictionary&amp;#39; 更改 root 目录。在 linux 系统中，">
 <meta name="twitter:image" content="https://raw.githubusercontent.com/Abyssali/Abyssali.github.io/master/images/image-20190429161045048.png">
     
@@ -39,7 +39,7 @@
         
     
     <!-- title -->
-    <title>chroot 简介</title>
+    <title>Docker 基础技术：chroot 学习</title>
     <!-- styles -->
     <link rel="stylesheet" href="/css/style.css">
     <!-- persian styles -->
@@ -75,7 +75,7 @@
     <span id="actions">
       <ul>
         
-        <li><a class="icon" href="/2019/04/29/namespace-简介/"><i class="fas fa-chevron-left" aria-hidden="true" onmouseover="$('#i-prev').toggle();" onmouseout="$('#i-prev').toggle();"></i></a></li>
+        <li><a class="icon" href="/2019/04/29/Docker 基础技术：namespace-学习/"><i class="fas fa-chevron-left" aria-hidden="true" onmouseover="$('#i-prev').toggle();" onmouseout="$('#i-prev').toggle();"></i></a></li>
         
         
         <li><a class="icon" href="/2019/04/29/高效学习/"><i class="fas fa-chevron-right" aria-hidden="true" onmouseover="$('#i-next').toggle();" onmouseout="$('#i-next').toggle();"></i></a></li>
@@ -91,16 +91,16 @@
     <br>
     <div id="share" style="display: none">
       <ul>
-  <li><a class="icon" href="http://www.facebook.com/sharer.php?u=http://yoursite.com/2019/04/29/chroot-简介/"><i class="fab fa-facebook " aria-hidden="true"></i></a></li>
-  <li><a class="icon" href="https://twitter.com/share?url=http://yoursite.com/2019/04/29/chroot-简介/&text=chroot 简介"><i class="fab fa-twitter " aria-hidden="true"></i></a></li>
-  <li><a class="icon" href="http://www.linkedin.com/shareArticle?url=http://yoursite.com/2019/04/29/chroot-简介/&title=chroot 简介"><i class="fab fa-linkedin " aria-hidden="true"></i></a></li>
-  <li><a class="icon" href="https://pinterest.com/pin/create/bookmarklet/?url=http://yoursite.com/2019/04/29/chroot-简介/&is_video=false&description=chroot 简介"><i class="fab fa-pinterest " aria-hidden="true"></i></a></li>
-  <li><a class="icon" href="mailto:?subject=chroot 简介&body=Check out this article: http://yoursite.com/2019/04/29/chroot-简介/"><i class="fas fa-envelope " aria-hidden="true"></i></a></li>
-  <li><a class="icon" href="https://getpocket.com/save?url=http://yoursite.com/2019/04/29/chroot-简介/&title=chroot 简介"><i class="fab fa-get-pocket " aria-hidden="true"></i></a></li>
-  <li><a class="icon" href="http://reddit.com/submit?url=http://yoursite.com/2019/04/29/chroot-简介/&title=chroot 简介"><i class="fab fa-reddit " aria-hidden="true"></i></a></li>
-  <li><a class="icon" href="http://www.stumbleupon.com/submit?url=http://yoursite.com/2019/04/29/chroot-简介/&title=chroot 简介"><i class="fab fa-stumbleupon " aria-hidden="true"></i></a></li>
-  <li><a class="icon" href="http://digg.com/submit?url=http://yoursite.com/2019/04/29/chroot-简介/&title=chroot 简介"><i class="fab fa-digg " aria-hidden="true"></i></a></li>
-  <li><a class="icon" href="http://www.tumblr.com/share/link?url=http://yoursite.com/2019/04/29/chroot-简介/&name=chroot 简介&description="><i class="fab fa-tumblr " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.facebook.com/sharer.php?u=http://yoursite.com/2019/04/29/Docker 基础技术：chroot-学习/"><i class="fab fa-facebook " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://twitter.com/share?url=http://yoursite.com/2019/04/29/Docker 基础技术：chroot-学习/&text=Docker 基础技术：chroot 学习"><i class="fab fa-twitter " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.linkedin.com/shareArticle?url=http://yoursite.com/2019/04/29/Docker 基础技术：chroot-学习/&title=Docker 基础技术：chroot 学习"><i class="fab fa-linkedin " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://pinterest.com/pin/create/bookmarklet/?url=http://yoursite.com/2019/04/29/Docker 基础技术：chroot-学习/&is_video=false&description=Docker 基础技术：chroot 学习"><i class="fab fa-pinterest " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="mailto:?subject=Docker 基础技术：chroot 学习&body=Check out this article: http://yoursite.com/2019/04/29/Docker 基础技术：chroot-学习/"><i class="fas fa-envelope " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://getpocket.com/save?url=http://yoursite.com/2019/04/29/Docker 基础技术：chroot-学习/&title=Docker 基础技术：chroot 学习"><i class="fab fa-get-pocket " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://reddit.com/submit?url=http://yoursite.com/2019/04/29/Docker 基础技术：chroot-学习/&title=Docker 基础技术：chroot 学习"><i class="fab fa-reddit " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.stumbleupon.com/submit?url=http://yoursite.com/2019/04/29/Docker 基础技术：chroot-学习/&title=Docker 基础技术：chroot 学习"><i class="fab fa-stumbleupon " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://digg.com/submit?url=http://yoursite.com/2019/04/29/Docker 基础技术：chroot-学习/&title=Docker 基础技术：chroot 学习"><i class="fab fa-digg " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.tumblr.com/share/link?url=http://yoursite.com/2019/04/29/Docker 基础技术：chroot-学习/&name=Docker 基础技术：chroot 学习&description="><i class="fab fa-tumblr " aria-hidden="true"></i></a></li>
 </ul>
 
     </div>
@@ -117,7 +117,7 @@
   <header>
     
     <h1 class="posttitle" itemprop="name headline">
-        chroot 简介
+        Docker 基础技术：chroot 学习
     </h1>
 
 
@@ -215,16 +215,16 @@
 
     <div id="share-footer" style="display: none">
       <ul>
-  <li><a class="icon" href="http://www.facebook.com/sharer.php?u=http://yoursite.com/2019/04/29/chroot-简介/"><i class="fab fa-facebook fa-lg" aria-hidden="true"></i></a></li>
-  <li><a class="icon" href="https://twitter.com/share?url=http://yoursite.com/2019/04/29/chroot-简介/&text=chroot 简介"><i class="fab fa-twitter fa-lg" aria-hidden="true"></i></a></li>
-  <li><a class="icon" href="http://www.linkedin.com/shareArticle?url=http://yoursite.com/2019/04/29/chroot-简介/&title=chroot 简介"><i class="fab fa-linkedin fa-lg" aria-hidden="true"></i></a></li>
-  <li><a class="icon" href="https://pinterest.com/pin/create/bookmarklet/?url=http://yoursite.com/2019/04/29/chroot-简介/&is_video=false&description=chroot 简介"><i class="fab fa-pinterest fa-lg" aria-hidden="true"></i></a></li>
-  <li><a class="icon" href="mailto:?subject=chroot 简介&body=Check out this article: http://yoursite.com/2019/04/29/chroot-简介/"><i class="fas fa-envelope fa-lg" aria-hidden="true"></i></a></li>
-  <li><a class="icon" href="https://getpocket.com/save?url=http://yoursite.com/2019/04/29/chroot-简介/&title=chroot 简介"><i class="fab fa-get-pocket fa-lg" aria-hidden="true"></i></a></li>
-  <li><a class="icon" href="http://reddit.com/submit?url=http://yoursite.com/2019/04/29/chroot-简介/&title=chroot 简介"><i class="fab fa-reddit fa-lg" aria-hidden="true"></i></a></li>
-  <li><a class="icon" href="http://www.stumbleupon.com/submit?url=http://yoursite.com/2019/04/29/chroot-简介/&title=chroot 简介"><i class="fab fa-stumbleupon fa-lg" aria-hidden="true"></i></a></li>
-  <li><a class="icon" href="http://digg.com/submit?url=http://yoursite.com/2019/04/29/chroot-简介/&title=chroot 简介"><i class="fab fa-digg fa-lg" aria-hidden="true"></i></a></li>
-  <li><a class="icon" href="http://www.tumblr.com/share/link?url=http://yoursite.com/2019/04/29/chroot-简介/&name=chroot 简介&description="><i class="fab fa-tumblr fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.facebook.com/sharer.php?u=http://yoursite.com/2019/04/29/Docker 基础技术：chroot-学习/"><i class="fab fa-facebook fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://twitter.com/share?url=http://yoursite.com/2019/04/29/Docker 基础技术：chroot-学习/&text=Docker 基础技术：chroot 学习"><i class="fab fa-twitter fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.linkedin.com/shareArticle?url=http://yoursite.com/2019/04/29/Docker 基础技术：chroot-学习/&title=Docker 基础技术：chroot 学习"><i class="fab fa-linkedin fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://pinterest.com/pin/create/bookmarklet/?url=http://yoursite.com/2019/04/29/Docker 基础技术：chroot-学习/&is_video=false&description=Docker 基础技术：chroot 学习"><i class="fab fa-pinterest fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="mailto:?subject=Docker 基础技术：chroot 学习&body=Check out this article: http://yoursite.com/2019/04/29/Docker 基础技术：chroot-学习/"><i class="fas fa-envelope fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://getpocket.com/save?url=http://yoursite.com/2019/04/29/Docker 基础技术：chroot-学习/&title=Docker 基础技术：chroot 学习"><i class="fab fa-get-pocket fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://reddit.com/submit?url=http://yoursite.com/2019/04/29/Docker 基础技术：chroot-学习/&title=Docker 基础技术：chroot 学习"><i class="fab fa-reddit fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.stumbleupon.com/submit?url=http://yoursite.com/2019/04/29/Docker 基础技术：chroot-学习/&title=Docker 基础技术：chroot 学习"><i class="fab fa-stumbleupon fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://digg.com/submit?url=http://yoursite.com/2019/04/29/Docker 基础技术：chroot-学习/&title=Docker 基础技术：chroot 学习"><i class="fab fa-digg fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.tumblr.com/share/link?url=http://yoursite.com/2019/04/29/Docker 基础技术：chroot-学习/&name=Docker 基础技术：chroot 学习&description="><i class="fab fa-tumblr fa-lg" aria-hidden="true"></i></a></li>
 </ul>
 
     </div>
