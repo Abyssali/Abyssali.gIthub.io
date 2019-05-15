@@ -6,18 +6,18 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="HandheldFriendly" content="True">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-    <meta name="description" content="A - Algorithm 每周一道算法题，leetcode   todo R - Review 每周阅读并点评一篇英文技术文章，medium   TDD 到底有没有用呢？medium - TDD Changed My Life  T - Tips 每周学习一个小技巧  todo S - Share 每周输出自己的观点  todo">
+    <meta name="description" content="A - Algorithm 每周一道算法题，leetcode   todo R - Review 每周阅读并点评一篇英文技术文章，medium   虽然常常 review 别人的代码，但是总是只 review 代码是否规范，有无基础代码错误，感觉还可以做的更多更好，但是不知道如何去做，在这里先看看别人是如何实践 code review 再对比自己所做的，做好code review 参考文章：cod">
 <meta name="keywords" content="ARTS">
 <meta property="og:type" content="article">
-<meta property="og:title" content="20190506-ARTS">
-<meta property="og:url" content="http://yoursite.com/2019/05/06/20190506-ARTS/index.html">
+<meta property="og:title" content="20190514-ARTS">
+<meta property="og:url" content="http://yoursite.com/2019/05/14/20190514-ARTS/index.html">
 <meta property="og:site_name" content="Abyssal">
-<meta property="og:description" content="A - Algorithm 每周一道算法题，leetcode   todo R - Review 每周阅读并点评一篇英文技术文章，medium   TDD 到底有没有用呢？medium - TDD Changed My Life  T - Tips 每周学习一个小技巧  todo S - Share 每周输出自己的观点  todo">
+<meta property="og:description" content="A - Algorithm 每周一道算法题，leetcode   todo R - Review 每周阅读并点评一篇英文技术文章，medium   虽然常常 review 别人的代码，但是总是只 review 代码是否规范，有无基础代码错误，感觉还可以做的更多更好，但是不知道如何去做，在这里先看看别人是如何实践 code review 再对比自己所做的，做好code review 参考文章：cod">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2019-05-15T02:40:43.200Z">
+<meta property="og:updated_time" content="2019-05-15T02:39:02.295Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="20190506-ARTS">
-<meta name="twitter:description" content="A - Algorithm 每周一道算法题，leetcode   todo R - Review 每周阅读并点评一篇英文技术文章，medium   TDD 到底有没有用呢？medium - TDD Changed My Life  T - Tips 每周学习一个小技巧  todo S - Share 每周输出自己的观点  todo">
+<meta name="twitter:title" content="20190514-ARTS">
+<meta name="twitter:description" content="A - Algorithm 每周一道算法题，leetcode   todo R - Review 每周阅读并点评一篇英文技术文章，medium   虽然常常 review 别人的代码，但是总是只 review 代码是否规范，有无基础代码错误，感觉还可以做的更多更好，但是不知道如何去做，在这里先看看别人是如何实践 code review 再对比自己所做的，做好code review 参考文章：cod">
     
     
         
@@ -37,7 +37,7 @@
         
     
     <!-- title -->
-    <title>20190506-ARTS</title>
+    <title>20190514-ARTS</title>
     <!-- styles -->
     <link rel="stylesheet" href="/css/style.css">
     <!-- persian styles -->
@@ -73,10 +73,8 @@
     <span id="actions">
       <ul>
         
-        <li><a class="icon" href="/2019/05/14/20190514-ARTS/"><i class="fas fa-chevron-left" aria-hidden="true" onmouseover="$('#i-prev').toggle();" onmouseout="$('#i-prev').toggle();"></i></a></li>
         
-        
-        <li><a class="icon" href="/2019/04/30/Linux-pthread-学习/"><i class="fas fa-chevron-right" aria-hidden="true" onmouseover="$('#i-next').toggle();" onmouseout="$('#i-next').toggle();"></i></a></li>
+        <li><a class="icon" href="/2019/05/06/20190506-ARTS/"><i class="fas fa-chevron-right" aria-hidden="true" onmouseover="$('#i-next').toggle();" onmouseout="$('#i-next').toggle();"></i></a></li>
         
         <li><a class="icon" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fas fa-chevron-up" aria-hidden="true" onmouseover="$('#i-top').toggle();" onmouseout="$('#i-top').toggle();"></i></a></li>
         <li><a class="icon" href="#"><i class="fas fa-share-alt" aria-hidden="true" onmouseover="$('#i-share').toggle();" onmouseout="$('#i-share').toggle();" onclick="$('#share').toggle();return false;"></i></a></li>
@@ -89,16 +87,16 @@
     <br>
     <div id="share" style="display: none">
       <ul>
-  <li><a class="icon" href="http://www.facebook.com/sharer.php?u=http://yoursite.com/2019/05/06/20190506-ARTS/"><i class="fab fa-facebook " aria-hidden="true"></i></a></li>
-  <li><a class="icon" href="https://twitter.com/share?url=http://yoursite.com/2019/05/06/20190506-ARTS/&text=20190506-ARTS"><i class="fab fa-twitter " aria-hidden="true"></i></a></li>
-  <li><a class="icon" href="http://www.linkedin.com/shareArticle?url=http://yoursite.com/2019/05/06/20190506-ARTS/&title=20190506-ARTS"><i class="fab fa-linkedin " aria-hidden="true"></i></a></li>
-  <li><a class="icon" href="https://pinterest.com/pin/create/bookmarklet/?url=http://yoursite.com/2019/05/06/20190506-ARTS/&is_video=false&description=20190506-ARTS"><i class="fab fa-pinterest " aria-hidden="true"></i></a></li>
-  <li><a class="icon" href="mailto:?subject=20190506-ARTS&body=Check out this article: http://yoursite.com/2019/05/06/20190506-ARTS/"><i class="fas fa-envelope " aria-hidden="true"></i></a></li>
-  <li><a class="icon" href="https://getpocket.com/save?url=http://yoursite.com/2019/05/06/20190506-ARTS/&title=20190506-ARTS"><i class="fab fa-get-pocket " aria-hidden="true"></i></a></li>
-  <li><a class="icon" href="http://reddit.com/submit?url=http://yoursite.com/2019/05/06/20190506-ARTS/&title=20190506-ARTS"><i class="fab fa-reddit " aria-hidden="true"></i></a></li>
-  <li><a class="icon" href="http://www.stumbleupon.com/submit?url=http://yoursite.com/2019/05/06/20190506-ARTS/&title=20190506-ARTS"><i class="fab fa-stumbleupon " aria-hidden="true"></i></a></li>
-  <li><a class="icon" href="http://digg.com/submit?url=http://yoursite.com/2019/05/06/20190506-ARTS/&title=20190506-ARTS"><i class="fab fa-digg " aria-hidden="true"></i></a></li>
-  <li><a class="icon" href="http://www.tumblr.com/share/link?url=http://yoursite.com/2019/05/06/20190506-ARTS/&name=20190506-ARTS&description="><i class="fab fa-tumblr " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.facebook.com/sharer.php?u=http://yoursite.com/2019/05/14/20190514-ARTS/"><i class="fab fa-facebook " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://twitter.com/share?url=http://yoursite.com/2019/05/14/20190514-ARTS/&text=20190514-ARTS"><i class="fab fa-twitter " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.linkedin.com/shareArticle?url=http://yoursite.com/2019/05/14/20190514-ARTS/&title=20190514-ARTS"><i class="fab fa-linkedin " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://pinterest.com/pin/create/bookmarklet/?url=http://yoursite.com/2019/05/14/20190514-ARTS/&is_video=false&description=20190514-ARTS"><i class="fab fa-pinterest " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="mailto:?subject=20190514-ARTS&body=Check out this article: http://yoursite.com/2019/05/14/20190514-ARTS/"><i class="fas fa-envelope " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://getpocket.com/save?url=http://yoursite.com/2019/05/14/20190514-ARTS/&title=20190514-ARTS"><i class="fab fa-get-pocket " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://reddit.com/submit?url=http://yoursite.com/2019/05/14/20190514-ARTS/&title=20190514-ARTS"><i class="fab fa-reddit " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.stumbleupon.com/submit?url=http://yoursite.com/2019/05/14/20190514-ARTS/&title=20190514-ARTS"><i class="fab fa-stumbleupon " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://digg.com/submit?url=http://yoursite.com/2019/05/14/20190514-ARTS/&title=20190514-ARTS"><i class="fab fa-digg " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.tumblr.com/share/link?url=http://yoursite.com/2019/05/14/20190514-ARTS/&name=20190514-ARTS&description="><i class="fab fa-tumblr " aria-hidden="true"></i></a></li>
 </ul>
 
     </div>
@@ -115,7 +113,7 @@
   <header>
     
     <h1 class="posttitle" itemprop="name headline">
-        20190506-ARTS
+        20190514-ARTS
     </h1>
 
 
@@ -127,7 +125,7 @@
       
     <div class="postdate">
       
-        <time datetime="2019-05-06T08:57:08.000Z" itemprop="datePublished">2019-05-06</time>
+        <time datetime="2019-05-14T14:35:53.000Z" itemprop="datePublished">2019-05-14</time>
         
       
     </div>
@@ -154,11 +152,15 @@
 <h5 id="R-Review"><a href="#R-Review" class="headerlink" title="R - Review"></a>R - Review</h5><blockquote>
 <p>每周阅读并点评一篇英文技术文章，<a href="https://medium.com" target="_blank" rel="noopener">medium</a> </p>
 </blockquote>
-<p>TDD 到底有没有用呢？medium - <a href="https://medium.com/javascript-scene/tdd-changed-my-life-5af0ce099f80" target="_blank" rel="noopener">TDD Changed My Life</a> </p>
+<p>虽然常常 review 别人的代码，但是总是只 review 代码是否规范，有无基础代码错误，感觉还可以做的更多更好，但是不知道如何去做，在这里先看看别人是如何实践 <code>code review</code> 再对比自己所做的，做好<code>code review</code></p>
+<p>参考文章：<a href="https://medium.com/palantir/code-review-best-practices-19e02780015f" target="_blank" rel="noopener">code-review-best-practices</a> ，总结一下：</p>
+<blockquote>
+</blockquote>
 <h5 id="T-Tips"><a href="#T-Tips" class="headerlink" title="T - Tips"></a>T - Tips</h5><blockquote>
 <p>每周学习一个小技巧</p>
 </blockquote>
-<p>todo</p>
+<p>一直听说<code>alfred</code>是<code>mac</code>上的神器之一，但是一直没有抽空去学(还是懒😝)，这次先看一下基础教程</p>
+<p><a href="https://sspai.com/post/32979" target="_blank" rel="noopener">从零开始学习 Alfred：基础功能及设置</a></p>
 <h5 id="S-Share"><a href="#S-Share" class="headerlink" title="S - Share"></a>S - Share</h5><blockquote>
 <p>每周输出自己的观点</p>
 </blockquote>
@@ -193,16 +195,16 @@
 
     <div id="share-footer" style="display: none">
       <ul>
-  <li><a class="icon" href="http://www.facebook.com/sharer.php?u=http://yoursite.com/2019/05/06/20190506-ARTS/"><i class="fab fa-facebook fa-lg" aria-hidden="true"></i></a></li>
-  <li><a class="icon" href="https://twitter.com/share?url=http://yoursite.com/2019/05/06/20190506-ARTS/&text=20190506-ARTS"><i class="fab fa-twitter fa-lg" aria-hidden="true"></i></a></li>
-  <li><a class="icon" href="http://www.linkedin.com/shareArticle?url=http://yoursite.com/2019/05/06/20190506-ARTS/&title=20190506-ARTS"><i class="fab fa-linkedin fa-lg" aria-hidden="true"></i></a></li>
-  <li><a class="icon" href="https://pinterest.com/pin/create/bookmarklet/?url=http://yoursite.com/2019/05/06/20190506-ARTS/&is_video=false&description=20190506-ARTS"><i class="fab fa-pinterest fa-lg" aria-hidden="true"></i></a></li>
-  <li><a class="icon" href="mailto:?subject=20190506-ARTS&body=Check out this article: http://yoursite.com/2019/05/06/20190506-ARTS/"><i class="fas fa-envelope fa-lg" aria-hidden="true"></i></a></li>
-  <li><a class="icon" href="https://getpocket.com/save?url=http://yoursite.com/2019/05/06/20190506-ARTS/&title=20190506-ARTS"><i class="fab fa-get-pocket fa-lg" aria-hidden="true"></i></a></li>
-  <li><a class="icon" href="http://reddit.com/submit?url=http://yoursite.com/2019/05/06/20190506-ARTS/&title=20190506-ARTS"><i class="fab fa-reddit fa-lg" aria-hidden="true"></i></a></li>
-  <li><a class="icon" href="http://www.stumbleupon.com/submit?url=http://yoursite.com/2019/05/06/20190506-ARTS/&title=20190506-ARTS"><i class="fab fa-stumbleupon fa-lg" aria-hidden="true"></i></a></li>
-  <li><a class="icon" href="http://digg.com/submit?url=http://yoursite.com/2019/05/06/20190506-ARTS/&title=20190506-ARTS"><i class="fab fa-digg fa-lg" aria-hidden="true"></i></a></li>
-  <li><a class="icon" href="http://www.tumblr.com/share/link?url=http://yoursite.com/2019/05/06/20190506-ARTS/&name=20190506-ARTS&description="><i class="fab fa-tumblr fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.facebook.com/sharer.php?u=http://yoursite.com/2019/05/14/20190514-ARTS/"><i class="fab fa-facebook fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://twitter.com/share?url=http://yoursite.com/2019/05/14/20190514-ARTS/&text=20190514-ARTS"><i class="fab fa-twitter fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.linkedin.com/shareArticle?url=http://yoursite.com/2019/05/14/20190514-ARTS/&title=20190514-ARTS"><i class="fab fa-linkedin fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://pinterest.com/pin/create/bookmarklet/?url=http://yoursite.com/2019/05/14/20190514-ARTS/&is_video=false&description=20190514-ARTS"><i class="fab fa-pinterest fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="mailto:?subject=20190514-ARTS&body=Check out this article: http://yoursite.com/2019/05/14/20190514-ARTS/"><i class="fas fa-envelope fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://getpocket.com/save?url=http://yoursite.com/2019/05/14/20190514-ARTS/&title=20190514-ARTS"><i class="fab fa-get-pocket fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://reddit.com/submit?url=http://yoursite.com/2019/05/14/20190514-ARTS/&title=20190514-ARTS"><i class="fab fa-reddit fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.stumbleupon.com/submit?url=http://yoursite.com/2019/05/14/20190514-ARTS/&title=20190514-ARTS"><i class="fab fa-stumbleupon fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://digg.com/submit?url=http://yoursite.com/2019/05/14/20190514-ARTS/&title=20190514-ARTS"><i class="fab fa-digg fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.tumblr.com/share/link?url=http://yoursite.com/2019/05/14/20190514-ARTS/&name=20190514-ARTS&description="><i class="fab fa-tumblr fa-lg" aria-hidden="true"></i></a></li>
 </ul>
 
     </div>
