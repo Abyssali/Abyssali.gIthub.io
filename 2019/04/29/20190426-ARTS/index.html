@@ -6,18 +6,18 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="HandheldFriendly" content="True">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-    <meta name="description" content="A - Algorithm 每周一道算法题，leetcode   todo R - Review 每周阅读并点评一篇英文技术文章，medium   todo T - Tips 每周学习一个小技巧  todo S - Share 每周输出自己的观点  todo">
+    <meta name="description" content="[TOC] A - Algorithm 每周一道算法题，leetcode   todo R - Review 每周阅读并点评一篇英文技术文章，medium   TDD Changed My Life最近对 TDD 比较感兴趣，看一下别人是如何实践TDD的 文中观点 1： Why TDD?虽然使用 TDD后，bug 任然会产生，但它显著提高了测试覆盖率，并将生产环境的错误降低了 40%-80%，">
 <meta name="keywords" content="ARTS">
 <meta property="og:type" content="article">
 <meta property="og:title" content="20190426-ARTS">
 <meta property="og:url" content="http://yoursite.com/2019/04/29/20190426-ARTS/index.html">
 <meta property="og:site_name" content="Abyssal">
-<meta property="og:description" content="A - Algorithm 每周一道算法题，leetcode   todo R - Review 每周阅读并点评一篇英文技术文章，medium   todo T - Tips 每周学习一个小技巧  todo S - Share 每周输出自己的观点  todo">
+<meta property="og:description" content="[TOC] A - Algorithm 每周一道算法题，leetcode   todo R - Review 每周阅读并点评一篇英文技术文章，medium   TDD Changed My Life最近对 TDD 比较感兴趣，看一下别人是如何实践TDD的 文中观点 1： Why TDD?虽然使用 TDD后，bug 任然会产生，但它显著提高了测试覆盖率，并将生产环境的错误降低了 40%-80%，">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2019-05-15T13:50:40.539Z">
+<meta property="og:updated_time" content="2019-05-15T14:57:01.337Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="20190426-ARTS">
-<meta name="twitter:description" content="A - Algorithm 每周一道算法题，leetcode   todo R - Review 每周阅读并点评一篇英文技术文章，medium   todo T - Tips 每周学习一个小技巧  todo S - Share 每周输出自己的观点  todo">
+<meta name="twitter:description" content="[TOC] A - Algorithm 每周一道算法题，leetcode   todo R - Review 每周阅读并点评一篇英文技术文章，medium   TDD Changed My Life最近对 TDD 比较感兴趣，看一下别人是如何实践TDD的 文中观点 1： Why TDD?虽然使用 TDD后，bug 任然会产生，但它显著提高了测试覆盖率，并将生产环境的错误降低了 40%-80%，">
     
     
         
@@ -103,7 +103,7 @@
 
     </div>
     <div id="toc">
-      <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#A-Algorithm"><span class="toc-number">1.</span> <span class="toc-text">A - Algorithm</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#R-Review"><span class="toc-number">2.</span> <span class="toc-text">R - Review</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#T-Tips"><span class="toc-number">3.</span> <span class="toc-text">T - Tips</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#S-Share"><span class="toc-number">4.</span> <span class="toc-text">S - Share</span></a></li></ol>
+      <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#A-Algorithm"><span class="toc-number">1.</span> <span class="toc-text">A - Algorithm</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#R-Review"><span class="toc-number">2.</span> <span class="toc-text">R - Review</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#TDD-Changed-My-Life"><span class="toc-number">2.1.</span> <span class="toc-text">TDD Changed My Life</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#文中观点-1：-Why-TDD"><span class="toc-number">2.1.1.</span> <span class="toc-text">文中观点 1： Why TDD?</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#文中观点-2：What-is-TDD？"><span class="toc-number">2.1.2.</span> <span class="toc-text">文中观点 2：What is TDD？</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#文中观点-3：TDD-怎样改变了”我”的开发习惯"><span class="toc-number">2.1.3.</span> <span class="toc-text">文中观点 3：TDD 怎样改变了”我”的开发习惯</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#T-Tips"><span class="toc-number">3.</span> <span class="toc-text">T - Tips</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#S-Share"><span class="toc-number">4.</span> <span class="toc-text">S - Share</span></a></li></ol>
     </div>
   </span>
 </div>
@@ -147,14 +147,26 @@
   
 
   <div class="content" itemprop="articleBody">
-    <h2 id="A-Algorithm"><a href="#A-Algorithm" class="headerlink" title="A - Algorithm"></a>A - Algorithm</h2><blockquote>
+    <p>[TOC]</p>
+<h2 id="A-Algorithm"><a href="#A-Algorithm" class="headerlink" title="A - Algorithm"></a>A - Algorithm</h2><blockquote>
 <p>每周一道算法题，<a href="https://leetcode.com" target="_blank" rel="noopener">leetcode</a> </p>
 </blockquote>
 <p>todo</p>
 <h2 id="R-Review"><a href="#R-Review" class="headerlink" title="R - Review"></a>R - Review</h2><blockquote>
 <p>每周阅读并点评一篇英文技术文章，<a href="https://medium.com" target="_blank" rel="noopener">medium</a> </p>
 </blockquote>
-<p>todo</p>
+<h3 id="TDD-Changed-My-Life"><a href="#TDD-Changed-My-Life" class="headerlink" title="TDD Changed My Life"></a><a href="https://medium.com/javascript-scene/tdd-changed-my-life-5af0ce099f80" target="_blank" rel="noopener">TDD Changed My Life</a></h3><p>最近对 <code>TDD</code> 比较感兴趣，看一下别人是如何实践<code>TDD</code>的</p>
+<h4 id="文中观点-1：-Why-TDD"><a href="#文中观点-1：-Why-TDD" class="headerlink" title="文中观点 1： Why TDD?"></a>文中观点 1： <strong>Why TDD?</strong></h4><p>虽然使用 <code>TDD</code>后，<code>bug</code> 任然会产生，但它显著提高了<strong>测试覆盖率</strong>，并将生产环境的错误降低了 <strong>40%-80%</strong>，</p>
+<blockquote>
+<p><strong>TDD eradicates fear of change</strong>.</p>
+</blockquote>
+<h4 id="文中观点-2：What-is-TDD？"><a href="#文中观点-2：What-is-TDD？" class="headerlink" title="文中观点 2：What is TDD？"></a>文中观点 2：What is TDD？</h4><p><code>TDD(Test Driven Development)</code> 很简单</p>
+<ol>
+<li>在写实现代码之前，先写一些测试代码来证明这些实现有效或失败</li>
+<li>编写实现代码并通过测试</li>
+<li>如果有需要，那么请重构，因为你已经有了测试来告诉你实现是有效或者失败，所以请有信心进行重构</li>
+</ol>
+<h4 id="文中观点-3：TDD-怎样改变了”我”的开发习惯"><a href="#文中观点-3：TDD-怎样改变了”我”的开发习惯" class="headerlink" title="文中观点 3：TDD 怎样改变了”我”的开发习惯"></a>文中观点 3：TDD 怎样改变了”我”的开发习惯</h4><p>作者用了一个生动的例子讲述了 <code>TDD</code> 是如何改变他的开发习惯的，并且讲述了 <strong>TDD告诉我如何编写更好的代码</strong>，<strong>TDD如何节省整个团队的时间</strong>  <code>TDD</code> 带来的其他好处</p>
 <h2 id="T-Tips"><a href="#T-Tips" class="headerlink" title="T - Tips"></a>T - Tips</h2><blockquote>
 <p>每周学习一个小技巧</p>
 </blockquote>
@@ -188,7 +200,7 @@
     </div>
 
     <div id="toc-footer" style="display: none">
-      <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#A-Algorithm"><span class="toc-number">1.</span> <span class="toc-text">A - Algorithm</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#R-Review"><span class="toc-number">2.</span> <span class="toc-text">R - Review</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#T-Tips"><span class="toc-number">3.</span> <span class="toc-text">T - Tips</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#S-Share"><span class="toc-number">4.</span> <span class="toc-text">S - Share</span></a></li></ol>
+      <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#A-Algorithm"><span class="toc-number">1.</span> <span class="toc-text">A - Algorithm</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#R-Review"><span class="toc-number">2.</span> <span class="toc-text">R - Review</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#TDD-Changed-My-Life"><span class="toc-number">2.1.</span> <span class="toc-text">TDD Changed My Life</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#文中观点-1：-Why-TDD"><span class="toc-number">2.1.1.</span> <span class="toc-text">文中观点 1： Why TDD?</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#文中观点-2：What-is-TDD？"><span class="toc-number">2.1.2.</span> <span class="toc-text">文中观点 2：What is TDD？</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#文中观点-3：TDD-怎样改变了”我”的开发习惯"><span class="toc-number">2.1.3.</span> <span class="toc-text">文中观点 3：TDD 怎样改变了”我”的开发习惯</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#T-Tips"><span class="toc-number">3.</span> <span class="toc-text">T - Tips</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#S-Share"><span class="toc-number">4.</span> <span class="toc-text">S - Share</span></a></li></ol>
     </div>
 
     <div id="share-footer" style="display: none">
