@@ -6,18 +6,18 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="HandheldFriendly" content="True">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-    <meta name="description" content="A - Algorithm 每周一道算法题，leetcode   3. Longest Substring Without Repeating Characters Given a string, find the length of the longest substring without repeating characters. Example 1: 123Input: &amp;quot;abc">
+    <meta name="description" content="[TOC] A - Algorithm 每周一道算法题，leetcode   3. Longest Substring Without Repeating Characters Given a string, find the length of the longest substring without repeating characters. Example 1: 123Input: &amp;qu">
 <meta name="keywords" content="ARTS">
 <meta property="og:type" content="article">
 <meta property="og:title" content="20190408-ARTS">
 <meta property="og:url" content="http://yoursite.com/2019/04/08/20190408-ARTS/index.html">
 <meta property="og:site_name" content="Abyssal">
-<meta property="og:description" content="A - Algorithm 每周一道算法题，leetcode   3. Longest Substring Without Repeating Characters Given a string, find the length of the longest substring without repeating characters. Example 1: 123Input: &amp;quot;abc">
+<meta property="og:description" content="[TOC] A - Algorithm 每周一道算法题，leetcode   3. Longest Substring Without Repeating Characters Given a string, find the length of the longest substring without repeating characters. Example 1: 123Input: &amp;qu">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2019-04-26T08:12:44.001Z">
+<meta property="og:updated_time" content="2019-05-15T13:31:58.681Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="20190408-ARTS">
-<meta name="twitter:description" content="A - Algorithm 每周一道算法题，leetcode   3. Longest Substring Without Repeating Characters Given a string, find the length of the longest substring without repeating characters. Example 1: 123Input: &amp;quot;abc">
+<meta name="twitter:description" content="[TOC] A - Algorithm 每周一道算法题，leetcode   3. Longest Substring Without Repeating Characters Given a string, find the length of the longest substring without repeating characters. Example 1: 123Input: &amp;qu">
     
     
         
@@ -103,7 +103,7 @@
 
     </div>
     <div id="toc">
-      <ol class="toc"><li class="toc-item toc-level-5"><a class="toc-link" href="#A-Algorithm"><span class="toc-number">1.</span> <span class="toc-text">A - Algorithm</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#R-Review"><span class="toc-number">2.</span> <span class="toc-text">R - Review</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#T-Tips"><span class="toc-number">3.</span> <span class="toc-text">T - Tips</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#S-Share"><span class="toc-number">4.</span> <span class="toc-text">S - Share</span></a></li></ol>
+      <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#A-Algorithm"><span class="toc-number">1.</span> <span class="toc-text">A - Algorithm</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#R-Review"><span class="toc-number">2.</span> <span class="toc-text">R - Review</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#T-Tips"><span class="toc-number">3.</span> <span class="toc-text">T - Tips</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#S-Share"><span class="toc-number">4.</span> <span class="toc-text">S - Share</span></a></li></ol>
     </div>
   </span>
 </div>
@@ -147,7 +147,8 @@
   
 
   <div class="content" itemprop="articleBody">
-    <h5 id="A-Algorithm"><a href="#A-Algorithm" class="headerlink" title="A - Algorithm"></a>A - Algorithm</h5><blockquote>
+    <p>[TOC]</p>
+<h1 id="A-Algorithm"><a href="#A-Algorithm" class="headerlink" title="A - Algorithm"></a>A - Algorithm</h1><blockquote>
 <p>每周一道算法题，<a href="https://leetcode.com" target="_blank" rel="noopener">leetcode</a> </p>
 </blockquote>
 <p><a href="https://leetcode.com/problems/longest-substring-without-repeating-characters/" target="_blank" rel="noopener">3. Longest Substring Without Repeating Characters</a></p>
@@ -160,15 +161,15 @@
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">Input: &quot;pwwkew&quot;</span><br><span class="line">Output: 3</span><br><span class="line">Explanation: The answer is &quot;wke&quot;, with the length of 3. </span><br><span class="line">             Note that the answer must be a substring, &quot;pwke&quot; is a subsequence 							and not a substring.</span><br></pre></td></tr></table></figure>
 <p><strong>Solution:</strong></p>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/*</span></span><br><span class="line"><span class="comment">	解题思路: 遍历所有的字符序列, 然后每次统计最长的不重复字符序列的长度</span></span><br><span class="line"><span class="comment">*/</span></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span> </span>&#123;</span><br><span class="line">		<span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">lengthOfLongestSubstring</span><span class="params">(String s)</span> </span>&#123;</span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> (s.length() == <span class="number">0</span>) <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">        HashMap&lt;Character, Integer&gt; map = <span class="keyword">new</span> HashMap&lt;Character, Integer&gt;();</span><br><span class="line">        <span class="keyword">int</span> max = <span class="number">0</span>;</span><br><span class="line">        <span class="comment">/*</span></span><br><span class="line"><span class="comment">        将所有的字符放进 Map 中,</span></span><br><span class="line"><span class="comment">        在放入的过程中, 使用一个 j 来记住统计不包含重复字符的子序列的开头位置索引,</span></span><br><span class="line"><span class="comment">        每放入一个字符就计算一下现在的最长子序列的长度并记录在 max 中</span></span><br><span class="line"><span class="comment"></span></span><br><span class="line"><span class="comment">        如果检测检测到有重复字符出现, 那么将 j 移动到这个字符上次出现的位置的后面</span></span><br><span class="line"><span class="comment">        重新开始计数直到遍历完所有字符</span></span><br><span class="line"><span class="comment">         */</span></span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>, j = <span class="number">0</span>; i &lt; s.length(); ++i) &#123;</span><br><span class="line">            <span class="keyword">if</span> (map.containsKey(s.charAt(i))) &#123;</span><br><span class="line">                j = Math.max(j, map.get(s.charAt(i)) + <span class="number">1</span>);</span><br><span class="line">            &#125;</span><br><span class="line">            map.put(s.charAt(i), i);</span><br><span class="line">            max = Math.max(max, i - j + <span class="number">1</span>);</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> max;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h5 id="R-Review"><a href="#R-Review" class="headerlink" title="R - Review"></a>R - Review</h5><blockquote>
+<h1 id="R-Review"><a href="#R-Review" class="headerlink" title="R - Review"></a>R - Review</h1><blockquote>
 <p>每周阅读并点评一篇英文技术文章，<a href="https://medium.com" target="_blank" rel="noopener">medium</a> </p>
 </blockquote>
 <p>todo</p>
-<h5 id="T-Tips"><a href="#T-Tips" class="headerlink" title="T - Tips"></a>T - Tips</h5><blockquote>
+<h1 id="T-Tips"><a href="#T-Tips" class="headerlink" title="T - Tips"></a>T - Tips</h1><blockquote>
 <p>每周学习一个小技巧</p>
 </blockquote>
 <p>todo</p>
-<h5 id="S-Share"><a href="#S-Share" class="headerlink" title="S - Share"></a>S - Share</h5><blockquote>
+<h1 id="S-Share"><a href="#S-Share" class="headerlink" title="S - Share"></a>S - Share</h1><blockquote>
 <p>每周输出自己的观点</p>
 </blockquote>
 <p>todo</p>
@@ -197,7 +198,7 @@
     </div>
 
     <div id="toc-footer" style="display: none">
-      <ol class="toc"><li class="toc-item toc-level-5"><a class="toc-link" href="#A-Algorithm"><span class="toc-number">1.</span> <span class="toc-text">A - Algorithm</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#R-Review"><span class="toc-number">2.</span> <span class="toc-text">R - Review</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#T-Tips"><span class="toc-number">3.</span> <span class="toc-text">T - Tips</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#S-Share"><span class="toc-number">4.</span> <span class="toc-text">S - Share</span></a></li></ol>
+      <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#A-Algorithm"><span class="toc-number">1.</span> <span class="toc-text">A - Algorithm</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#R-Review"><span class="toc-number">2.</span> <span class="toc-text">R - Review</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#T-Tips"><span class="toc-number">3.</span> <span class="toc-text">T - Tips</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#S-Share"><span class="toc-number">4.</span> <span class="toc-text">S - Share</span></a></li></ol>
     </div>
 
     <div id="share-footer" style="display: none">
