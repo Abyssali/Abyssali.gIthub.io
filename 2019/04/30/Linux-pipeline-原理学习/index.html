@@ -14,12 +14,12 @@
 <meta property="og:site_name" content="Abyssal">
 <meta property="og:description" content="pipeline简介及应用Pipelining是通过管道从处理器累积指令的过程。 它允许以有序的过程存储和执行指令。 它也被称为管道处理（pipeline processing）。 Pipelining是一种在执行期间多个指令重叠的技术。 Pipeline分为阶段，这些阶段彼此连接以形成管状结构。 指令从一端进入，从另一端退出。 Pipelining增加了整体指令吞吐量。 在pipeline系统中">
 <meta property="og:locale" content="en">
-<meta property="og:image" content="https://raw.githubusercontent.com/Abyssali/Abyssali.github.io/master/images/image-20190430152030445.png">
-<meta property="og:updated_time" content="2019-04-30T07:32:27.231Z">
+<meta property="og:image" content="https://raw.githubusercontent.com/Abyssali/blog_images/master/main-qimg-f1ec01dd69308b03feec245262b27bb5.png">
+<meta property="og:updated_time" content="2019-05-16T15:44:17.017Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Linux pipeline 原理学习">
 <meta name="twitter:description" content="pipeline简介及应用Pipelining是通过管道从处理器累积指令的过程。 它允许以有序的过程存储和执行指令。 它也被称为管道处理（pipeline processing）。 Pipelining是一种在执行期间多个指令重叠的技术。 Pipeline分为阶段，这些阶段彼此连接以形成管状结构。 指令从一端进入，从另一端退出。 Pipelining增加了整体指令吞吐量。 在pipeline系统中">
-<meta name="twitter:image" content="https://raw.githubusercontent.com/Abyssali/Abyssali.github.io/master/images/image-20190430152030445.png">
+<meta name="twitter:image" content="https://raw.githubusercontent.com/Abyssali/blog_images/master/main-qimg-f1ec01dd69308b03feec245262b27bb5.png">
     
     
         
@@ -154,7 +154,7 @@
 <p><code>Pipelining</code>增加了整体指令吞吐量。</p>
 <p>在<code>pipeline</code>系统中，每个段由输入寄存器和组合电路组成。 寄存器用于保存数据，组合电路对其执行操作。 组合电路的输出应用于下一段的输入寄存器。</p>
 <p><code>Pipeline system</code>就像工厂中的现代装配线一样。</p>
-<p><img src="https://raw.githubusercontent.com/Abyssali/Abyssali.github.io/master/images/image-20190430152030445.png" alt="image-20190430152030445"></p>
+<p><img src="https://raw.githubusercontent.com/Abyssali/blog_images/master/main-qimg-f1ec01dd69308b03feec245262b27bb5.png" alt="image-20190430152030445"></p>
 <h4 id="pipeline-的架构是什么，它是怎么实现的？"><a href="#pipeline-的架构是什么，它是怎么实现的？" class="headerlink" title="pipeline 的架构是什么，它是怎么实现的？"></a><code>pipeline</code> 的架构是什么，它是怎么实现的？</h4><p><code>The bus interface unit</code>负责执行所有外部总线操作。 为了加速程序的执行，<strong>指令获取</strong>和<strong>指令的执行</strong>彼此重叠。 在执行当前指令时获取下一指令的过程称为<code>pipelining</code>。 在<code>pipelining</code>操作中，当执行第 <strong>n</strong> 条指令时，取出第<strong>（n + 1）</strong>条指令，从而提高处理速度。</p>
 <p><code>BIU</code>(<code>Bus Interfacing Unit</code>)填充队列，直到整个队列被填满。当<code>EU</code>(执行单元)忙于解码和执行一条指令时，<code>BIU</code>会为下一条指令获取最多6个指令字节。当队列的至少两个位置空闲时，<code>BIU</code>重新开始填充队列。执行单元(<code>EU</code>)应该解码或执行一条指令。解码不需要使用总线。这些字节被称为预取字节，并存储在先进先出(<code>FIFO</code>)寄存器集中，称为队列。</p>
 <p><code>pipelining</code>的优点: <code>EU</code>总是从<code>BIU</code>中的队列中读取下一个指令字节。这比向内存发送一个地址并等待下一个指令字节到来要快得多。</p>

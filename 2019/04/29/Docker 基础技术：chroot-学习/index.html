@@ -14,12 +14,12 @@
 <meta property="og:site_name" content="Abyssal">
 <meta property="og:description" content="最近在学习 docker，其中提到了 docker 是依赖于 namespace的，而学习了解 namespace时了解到到namesapce本质是资源隔离，而 Linux 中实现资源隔离还有 chroot这种方式，所以学习一下 chroot 什么是 chroot ？chroot 即为 &amp;#39;change root dictionary&amp;#39; 更改 root 目录。在 linux 系统中，">
 <meta property="og:locale" content="en">
-<meta property="og:image" content="https://raw.githubusercontent.com/Abyssali/Abyssali.github.io/master/images/image-20190429161045048.png">
-<meta property="og:updated_time" content="2019-05-15T13:34:31.875Z">
+<meta property="og:image" content="https://raw.githubusercontent.com/Abyssali/blog_images/master/directory2.jpg">
+<meta property="og:updated_time" content="2019-05-16T15:46:10.560Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Docker 基础技术：chroot 学习">
 <meta name="twitter:description" content="最近在学习 docker，其中提到了 docker 是依赖于 namespace的，而学习了解 namespace时了解到到namesapce本质是资源隔离，而 Linux 中实现资源隔离还有 chroot这种方式，所以学习一下 chroot 什么是 chroot ？chroot 即为 &amp;#39;change root dictionary&amp;#39; 更改 root 目录。在 linux 系统中，">
-<meta name="twitter:image" content="https://raw.githubusercontent.com/Abyssali/Abyssali.github.io/master/images/image-20190429161045048.png">
+<meta name="twitter:image" content="https://raw.githubusercontent.com/Abyssali/blog_images/master/directory2.jpg">
     
     
         
@@ -153,7 +153,7 @@
 <h4 id="什么是-chroot-？"><a href="#什么是-chroot-？" class="headerlink" title="什么是 chroot ？"></a>什么是 <code>chroot</code> ？</h4><p><code>chroot</code> 即为 <code>&#39;change root dictionary&#39;</code> 更改 root 目录。在 linux 系统中，系统默认的根目录是 <code>/</code>，(通过修改根目录把用户<code>jail</code>到一个特定目录下)</p>
 <p><strong>而在使用 <code>chroot</code>之后，系统的目录结构将以指定的位置作为 <code>/</code> 位置。</strong></p>
 <p>图：Linux 的系统目录结构</p>
-<p><img src="https://raw.githubusercontent.com/Abyssali/Abyssali.github.io/master/images/image-20190429161045048.png" alt="image-20190429161045048"></p>
+<p><img src="https://raw.githubusercontent.com/Abyssali/blog_images/master/directory2.jpg" alt="image-20190429161045048"></p>
 <h4 id="为什么要使用它-？"><a href="#为什么要使用它-？" class="headerlink" title="为什么要使用它 ？"></a>为什么要使用它 ？</h4><p>使用 <code>chroot</code> 后，系统将以新的目录位置为根目录位置，它带来以下好处</p>
 <ol>
 <li>限制了用户权利，增加系统的安全性：<ul>
@@ -183,7 +183,7 @@
 <p>保存以上代码为 <code>newchroot.c</code> 文件，编译后运行测试其功能。最后要指出的是，本文中的 <code>chroot</code> 并没有使用静态编译。如果有必要(如，在 initrd 中使用 chroot)，chroot 应该使用静态编译，若是使用动态编译，那么要拷贝相关的动态库文件到相应目录结构中。</p>
 <h5 id="newchroot-的测试"><a href="#newchroot-的测试" class="headerlink" title="newchroot 的测试"></a><code>newchroot</code> 的测试</h5><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">$ gcc -Wall newchroot.c -o newchroot</span><br><span class="line"> </span><br><span class="line"><span class="comment"># ./newchroot . /bin/ash</span></span><br><span class="line">newroot = .</span><br><span class="line"><span class="comment">#</span></span><br></pre></td></tr></table></figure>
 <h5 id="资料参考"><a href="#资料参考" class="headerlink" title="资料参考"></a>资料参考</h5><ol>
-<li><a href="https://www.ibm.com/developerworks/cn/linux/l-cn-chroot/index.html" target="_blank" rel="noopener">理解<code>chroot</code></a></li>
+<li><a href="https://www.ibm.com/developerworks/cn/linux/l-cn-chroot/index.html" target="_blank" rel="noopener">理解chroot</a></li>
 </ol>
 
   </div>
