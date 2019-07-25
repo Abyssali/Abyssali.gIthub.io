@@ -1,23 +1,23 @@
 <!DOCTYPE html>
 <html lang=en>
-<head><meta name="generator" content="Hexo 3.8.0">
+<head><meta name="generator" content="Hexo 3.9.0">
     <!-- so meta -->
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="HandheldFriendly" content="True">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-    <meta name="description" content="所需环境nodeJs 快速安装 1brew install node 1.创建GitHub仓库在 github 上创建名称为 xxxx.github.io 的 repository 2.初始化本地博客在本地创建一个文件夹来保存博客, 我这里创建在这里 1$ mkdir -p ~/code/github/blog 创建文件夹后初始化hexo到这里 123$ cd ~/code/github/blog">
+    <meta name="description" content="所需环境nodeJs 快速安装 1brew install node  1.创建GitHub仓库在 github 上创建名称为 xxxx.github.io 的 repository 2.初始化本地博客在本地创建一个文件夹来保存博客, 我这里创建在这里 1$ mkdir -p ~/code/github/blog  创建文件夹后初始化hexo到这里 123$ cd ~/code/github/bl">
 <meta name="keywords" content="hexo">
 <meta property="og:type" content="article">
 <meta property="og:title" content="github pages + hexo快速教程">
 <meta property="og:url" content="http://yoursite.com/2019/03/30/github-pages-hexo快速教程/index.html">
 <meta property="og:site_name" content="Abyssal">
-<meta property="og:description" content="所需环境nodeJs 快速安装 1brew install node 1.创建GitHub仓库在 github 上创建名称为 xxxx.github.io 的 repository 2.初始化本地博客在本地创建一个文件夹来保存博客, 我这里创建在这里 1$ mkdir -p ~/code/github/blog 创建文件夹后初始化hexo到这里 123$ cd ~/code/github/blog">
+<meta property="og:description" content="所需环境nodeJs 快速安装 1brew install node  1.创建GitHub仓库在 github 上创建名称为 xxxx.github.io 的 repository 2.初始化本地博客在本地创建一个文件夹来保存博客, 我这里创建在这里 1$ mkdir -p ~/code/github/blog  创建文件夹后初始化hexo到这里 123$ cd ~/code/github/bl">
 <meta property="og:locale" content="en">
 <meta property="og:updated_time" content="2019-03-30T12:38:48.435Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="github pages + hexo快速教程">
-<meta name="twitter:description" content="所需环境nodeJs 快速安装 1brew install node 1.创建GitHub仓库在 github 上创建名称为 xxxx.github.io 的 repository 2.初始化本地博客在本地创建一个文件夹来保存博客, 我这里创建在这里 1$ mkdir -p ~/code/github/blog 创建文件夹后初始化hexo到这里 123$ cd ~/code/github/blog">
+<meta name="twitter:description" content="所需环境nodeJs 快速安装 1brew install node  1.创建GitHub仓库在 github 上创建名称为 xxxx.github.io 的 repository 2.初始化本地博客在本地创建一个文件夹来保存博客, 我这里创建在这里 1$ mkdir -p ~/code/github/blog  创建文件夹后初始化hexo到这里 123$ cd ~/code/github/bl">
     
     
         
@@ -69,7 +69,7 @@
         
       </ul>
     </span>
-    <br>
+    <br/>
     <span id="actions">
       <ul>
         
@@ -86,7 +86,7 @@
       <span id="i-top" class="info" style="display:none;">Back to top</span>
       <span id="i-share" class="info" style="display:none;">Share post</span>
     </span>
-    <br>
+    <br/>
     <div id="share" style="display: none">
       <ul>
   <li><a class="icon" href="http://www.facebook.com/sharer.php?u=http://yoursite.com/2019/03/30/github-pages-hexo快速教程/"><i class="fab fa-facebook " aria-hidden="true"></i></a></li>
@@ -149,32 +149,44 @@
   <div class="content" itemprop="articleBody">
     <h4 id="所需环境"><a href="#所需环境" class="headerlink" title="所需环境"></a>所需环境</h4><p><a href="https://nodejs.org" target="_blank" rel="noopener">nodeJs</a> 快速安装</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">brew install node</span><br></pre></td></tr></table></figure>
+
 <h4 id="1-创建GitHub仓库"><a href="#1-创建GitHub仓库" class="headerlink" title="1.创建GitHub仓库"></a>1.创建GitHub仓库</h4><p>在 <a href="https://github.com" target="_blank" rel="noopener">github</a> 上创建名称为 xxxx.github.io 的 repository</p>
 <h4 id="2-初始化本地博客"><a href="#2-初始化本地博客" class="headerlink" title="2.初始化本地博客"></a>2.初始化本地博客</h4><p>在本地创建一个文件夹来保存博客, 我这里创建在这里</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ mkdir -p ~/code/github/blog</span><br></pre></td></tr></table></figure>
+
 <p>创建文件夹后初始化hexo到这里</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$ <span class="built_in">cd</span> ~/code/github/blog</span><br><span class="line">$ npm install hexo-cli -g</span><br><span class="line">$ hexo init blog</span><br></pre></td></tr></table></figure>
+
 <p>这个时候本地博客就初始化完成了，如想要在本地预览则可以使用下面的命令</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
+
 <p>本地预览地址:  <a href="localhost:4000" target="_blank" rel="noopener">localhost:4000</a> </p>
 <h4 id="3-推送本地博客到-Github"><a href="#3-推送本地博客到-Github" class="headerlink" title="3.推送本地博客到 Github"></a>3.推送本地博客到 Github</h4><p>此时的文件夹目录如下：（<a href="https://hexo.io/zh-cn/docs/configuration#%E7%9B%AE%E5%BD%95" target="_blank" rel="noopener">点我</a>看各文件夹具体作用）</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">.</span><br><span class="line">├── _config.yml    </span><br><span class="line">├── package.json    </span><br><span class="line">├── scaffolds    </span><br><span class="line">├── source    </span><br><span class="line">|   ├── _drafts    </span><br><span class="line">|   └── _posts    </span><br><span class="line">└── themes</span><br></pre></td></tr></table></figure>
+
 <p>修改 <code>_config.yml</code> 中的 <code>deploy</code> 将本地博客与刚创建的 github 仓库关联起来</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">$ vim _config.yml</span><br><span class="line"></span><br><span class="line"><span class="comment"># 翻到文件最后将自己的仓库添加到 deploy</span></span><br><span class="line">deploy:</span><br><span class="line">  <span class="built_in">type</span>: git</span><br><span class="line">  repo: https://github.com/Abyssali/Abyssali.github.io.git</span><br><span class="line">  branch: master</span><br></pre></td></tr></table></figure>
+
 <p>添加完配置之后，就可以将将本地博客推送到 github, hexo 提供了很方便的工具来做这个</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 安装 hexo-deployer-git</span></span><br><span class="line">$ npm install hexo-deployer-git --save</span><br><span class="line"></span><br><span class="line"><span class="comment"># 推送到 github</span></span><br><span class="line">$ hexo clean</span><br><span class="line">$ hexo g</span><br><span class="line">$ hexo d</span><br><span class="line"><span class="comment"># 或者直接</span></span><br><span class="line">$ hexo clean&amp;&amp;hexo g&amp;&amp;hexo d</span><br></pre></td></tr></table></figure>
+
 <p>上面的 <code>hexo g</code> 和 <code>hexo d</code> 都是命令简写，所有命令可以在 <a href="https://hexo.io/zh-cn/docs/commands" target="_blank" rel="noopener">这里</a> 查到</p>
 <p>🎉现在打开网址:  <code>xxxx.github.io</code> 博客就搭建好了～</p>
 <h4 id="4-新建文章及主题切换"><a href="#4-新建文章及主题切换" class="headerlink" title="4.新建文章及主题切换"></a>4.新建文章及主题切换</h4><h5 id="4-1-新建文章"><a href="#4-1-新建文章" class="headerlink" title="4.1 新建文章"></a>4.1 新建文章</h5><p>因为<code>hexo</code> 本地文件是以 <code>markdown</code> 支持的，所以新建文章有使用命令和手动创建两种方式</p>
 <h5 id="使用命令创建新文章"><a href="#使用命令创建新文章" class="headerlink" title="使用命令创建新文章"></a>使用命令创建新文章</h5><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"Hello Boy"</span></span><br></pre></td></tr></table></figure>
+
 <h5 id="手动创建"><a href="#手动创建" class="headerlink" title="手动创建"></a>手动创建</h5><p><code>hexo</code> 将我们创建的博文都以 <strong>md</strong> 文件存放在了 <strong>source</strong> 文件夹下, 所以可以进文件夹手动创建或将原有博文转为 <strong>md</strong> 格式复制到这里即可</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ <span class="built_in">cd</span> <span class="built_in">source</span>/_posts/</span><br><span class="line">$ touch Hello-Boy.md</span><br></pre></td></tr></table></figure>
+
 <p>⚠️<strong>注意：</strong> <code>hexo</code> 自动创建的 <strong>md</strong> 文件头部会有下面几行, 需要按下面格式添加到手动创建的 <strong>md</strong> 文件头部, 不然 <code>hexo</code> 在将 <strong>md</strong> 文件生成静态页面时会没有文章标题</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">---</span><br><span class="line">title: Hello Boy</span><br><span class="line">date: 2019-03-30 20:15:47</span><br><span class="line">tags:</span><br><span class="line">---</span><br></pre></td></tr></table></figure>
+
 <h5 id="4-2主题切换"><a href="#4-2主题切换" class="headerlink" title="4.2主题切换"></a>4.2主题切换</h5><p><code>hexo</code> 有很多不同的主题，目前使用人数最多的是 <a href="https://github.com/iissnan/hexo-theme-next" target="_blank" rel="noopener">next</a>  , 它的主题安装和切换也很简单，下面以安装<code>next</code> 为例</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 在 blog 目录下载 next 主题</span></span><br><span class="line">$ git <span class="built_in">clone</span> https://github.com/iissnan/hexo-theme-next themes/next</span><br><span class="line"><span class="comment"># 修改 _config.yml 切换主题</span></span><br><span class="line">$ vim _config.yml</span><br><span class="line"><span class="comment"># 翻到最后找到 theme , 将 theme 切换为 next</span></span><br><span class="line">theme: next</span><br></pre></td></tr></table></figure>
+
 <p>主题切换好之后重新部署到 github 就可以了</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo clean&amp;&amp;hexo g&amp;&amp;hexo d</span><br></pre></td></tr></table></figure>
+
 <h4 id="5-其他配置及QA"><a href="#5-其他配置及QA" class="headerlink" title="5.其他配置及QA"></a>5.其他配置及QA</h4><p>其他的配置参考<a href="https://hexo.io/zh-cn/docs/" target="_blank" rel="noopener">官网文档</a> 或者 <a href="https://www.google.com" target="_blank" rel="noopener">google</a></p>
 <p>🎉Enjoy ~</p>
 

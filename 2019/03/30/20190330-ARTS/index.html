@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang=en>
-<head><meta name="generator" content="Hexo 3.8.0">
+<head><meta name="generator" content="Hexo 3.9.0">
     <!-- so meta -->
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -14,7 +14,7 @@
 <meta property="og:site_name" content="Abyssal">
 <meta property="og:description" content="[TOC] A - Algorithm 每周一道算法题，leetcode   1.Two sumGiven an array of integers, return indices of the two numbers such that they add up to a specific target. You may assume that each input would have exac">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2019-05-15T15:25:11.248Z">
+<meta property="og:updated_time" content="2019-05-21T10:12:32.317Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="20190330-ARTS">
 <meta name="twitter:description" content="[TOC] A - Algorithm 每周一道算法题，leetcode   1.Two sumGiven an array of integers, return indices of the two numbers such that they add up to a specific target. You may assume that each input would have exac">
@@ -69,7 +69,7 @@
         
       </ul>
     </span>
-    <br>
+    <br/>
     <span id="actions">
       <ul>
         
@@ -86,7 +86,7 @@
       <span id="i-top" class="info" style="display:none;">Back to top</span>
       <span id="i-share" class="info" style="display:none;">Share post</span>
     </span>
-    <br>
+    <br/>
     <div id="share" style="display: none">
       <ul>
   <li><a class="icon" href="http://www.facebook.com/sharer.php?u=http://yoursite.com/2019/03/30/20190330-ARTS/"><i class="fab fa-facebook " aria-hidden="true"></i></a></li>
@@ -155,15 +155,28 @@
 <p>You may assume that each input would have <strong>exactly</strong> one solution, and you may not use the <em>same</em> element twice.</p>
 <p><strong>Example:</strong></p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">Given nums = [2, 7, 11, 15], target = 9,</span><br><span class="line"></span><br><span class="line">Because nums[0] + nums[1] = 2 + 7 = 9,</span><br><span class="line">return [0, 1].</span><br></pre></td></tr></table></figure>
+
 <p><strong>Solution:</strong></p>
 <p>解题思路：使用蛮力遍历两次即可得到结果, 时间复杂度是O(N2)耗时25ms</p>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span> </span>&#123;</span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">int</span>[] twoSum(<span class="keyword">int</span>[] nums, <span class="keyword">int</span> target) &#123;</span><br><span class="line">        <span class="keyword">int</span>[] result = <span class="keyword">new</span> <span class="keyword">int</span>[<span class="number">2</span>];</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; nums.length - <span class="number">1</span>; i++) &#123;</span><br><span class="line">            <span class="keyword">for</span> (<span class="keyword">int</span> j = i+<span class="number">1</span>; j &lt; nums.length; j++) &#123;</span><br><span class="line">                <span class="keyword">if</span> (nums[i] + nums[j] == target) &#123;</span><br><span class="line">                    result[<span class="number">0</span>] = i;</span><br><span class="line">                    result[<span class="number">1</span>] = j;</span><br><span class="line">                    <span class="keyword">return</span> result;</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> result;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
 <p>解题思路二：因为题目是不重复的元素，那么可用<code>hash table</code> 记录遍历过的值,时间复杂的O(n)</p>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span> </span>&#123;</span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">int</span>[] twoSum(<span class="keyword">int</span>[] nums, <span class="keyword">int</span> target) &#123;</span><br><span class="line">        Map&lt;Integer, Integer&gt; map = <span class="keyword">new</span> HashMap&lt;&gt;(nums.length);</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; nums.length; i++) &#123;</span><br><span class="line">            <span class="keyword">int</span> cmp = target - nums[i];</span><br><span class="line">            <span class="keyword">if</span> (map.containsKey(cmp)) &#123;</span><br><span class="line">                <span class="keyword">return</span> <span class="keyword">new</span> <span class="keyword">int</span>[]&#123;i, map.get(cmp)&#125;;</span><br><span class="line">            &#125;</span><br><span class="line">            map.put(nums[i], i);</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">throw</span> <span class="keyword">new</span> IllegalArgumentException(<span class="string">"No two sum solution"</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
 <h2 id="R-Review"><a href="#R-Review" class="headerlink" title="R - Review"></a>R - Review</h2><blockquote>
 <p>每周阅读并点评一篇英文技术文章，<a href="https://medium.com" target="_blank" rel="noopener">medium</a> </p>
 </blockquote>
-<h3 id="Microservices-Please-Don’t"><a href="#Microservices-Please-Don’t" class="headerlink" title="Microservices? Please, Don’t"></a><a href="https://dzone.com/articles/microservices-please-dont" target="_blank" rel="noopener">Microservices? Please, Don’t</a></h3><p>微服务是现在常见的架构模式，但是他们真的需要微服务吗？</p>
+<h3 id="Microservices-Please-Don’t"><a href="#Microservices-Please-Don’t" class="headerlink" title="Microservices? Please, Don’t"></a><a href="https://dzone.com/articles/microservices-please-dont" target="_blank" rel="noopener">Microservices? Please, Don’t</a></h3><p>微服务是现在常见的架构模式，但是微服务并不是银弹，推崇微服务的那些人他们真的需要微服务吗？</p>
+<p>作者提出了五个微服务常见的谬论：</p>
+<ol>
+<li>它使代码更清洁(clean code) - <em>你不需要引入网络边界作为编写更好代码的借口。</em></li>
+<li>它很简单 - <em>分布式交易绝非易事。</em></li>
+<li>它的速度很快 - <em>通过简单地应用一些额外的训练，你可以在整体中获得很多表现。</em></li>
+<li>对工程师来说很简单 - <em>群在孤立的代码库中工作的工程师导致’不是我的问题’综合症。</em></li>
+<li>具备更好的可扩展性 - <em>你可以像放大块一样容易地向外扩展微服务。</em></li>
+</ol>
+<p>那什么时候应该使用微服务呢？ <em>When you’re ready as an engineering organization.</em></p>
+<p>作者认为：使用微服务时，最重要的是理解你正在工作的领域，如果你深刻理解这个领域的边界是哪里以及依赖项是什么的时候，使用微服务是一个正确的选择.</p>
 <h2 id="T-Tips"><a href="#T-Tips" class="headerlink" title="T - Tips"></a>T - Tips</h2><blockquote>
 <p>每周学习一个小技巧</p>
 </blockquote>

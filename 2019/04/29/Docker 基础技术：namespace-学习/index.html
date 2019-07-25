@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang=en>
-<head><meta name="generator" content="Hexo 3.8.0">
+<head><meta name="generator" content="Hexo 3.9.0">
     <!-- so meta -->
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -69,7 +69,7 @@
         
       </ul>
     </span>
-    <br>
+    <br/>
     <span id="actions">
       <ul>
         
@@ -86,7 +86,7 @@
       <span id="i-top" class="info" style="display:none;">Back to top</span>
       <span id="i-share" class="info" style="display:none;">Share post</span>
     </span>
-    <br>
+    <br/>
     <div id="share" style="display: none">
       <ul>
   <li><a class="icon" href="http://www.facebook.com/sharer.php?u=http://yoursite.com/2019/04/29/Docker 基础技术：namespace-学习/"><i class="fab fa-facebook " aria-hidden="true"></i></a></li>
@@ -157,8 +157,7 @@
 <th>相关内核版本</th>
 </tr>
 </thead>
-<tbody>
-<tr>
+<tbody><tr>
 <td>Mount namespaces</td>
 <td>CLONE_NEWNS</td>
 <td><a href="http://lwn.net/2001/0301/a/namespaces.php3" target="_blank" rel="noopener">Linux 2.4.19</a></td>
@@ -188,8 +187,7 @@
 <td>CLONE_NEWUSER</td>
 <td>始于Linux 2.6.23 完成与Linux 3.8</td>
 </tr>
-</tbody>
-</table>
+</tbody></table>
 <p>可以看到系统调用的参数都是<code>CLONE_NEW**</code>，实际主要是 三个系统调用：</p>
 <ul>
 <li><code>clone()</code> - 实现线程的系统调用，用来创建一个新进程 <a href="http://man7.org/linux/man-pages/man2/clone.2.html" target="_blank" rel="noopener"><code>man page</code></a> ，并可以通过设计上述参数达到隔离的目的。</li>

@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang=en>
-<head><meta name="generator" content="Hexo 3.8.0">
+<head><meta name="generator" content="Hexo 3.9.0">
     <!-- so meta -->
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -69,7 +69,7 @@
         
       </ul>
     </span>
-    <br>
+    <br/>
     <span id="actions">
       <ul>
         
@@ -86,7 +86,7 @@
       <span id="i-top" class="info" style="display:none;">Back to top</span>
       <span id="i-share" class="info" style="display:none;">Share post</span>
     </span>
-    <br>
+    <br/>
     <div id="share" style="display: none">
       <ul>
   <li><a class="icon" href="http://www.facebook.com/sharer.php?u=http://yoursite.com/2019/04/30/Linux-pthread-学习/"><i class="fab fa-facebook " aria-hidden="true"></i></a></li>
@@ -183,8 +183,10 @@
 <h4 id="基本方法"><a href="#基本方法" class="headerlink" title="基本方法"></a>基本方法</h4><p>基本方法有<code>pthread_create()</code> 、<code>pthread_join()</code>、<code>pthread_self()</code>、<code>pthread_exit()</code>等。</p>
 <p>下面是一个简单的例子(来源于参考资料)</p>
 <figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdlib.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;pthread.h&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">void</span> *<span class="title">print_message_function</span><span class="params">( <span class="keyword">void</span> *ptr )</span></span>;</span><br><span class="line"></span><br><span class="line">main()</span><br><span class="line">&#123;</span><br><span class="line">     <span class="keyword">pthread_t</span> thread1, thread2;</span><br><span class="line">     <span class="keyword">char</span> *message1 = <span class="string">"Thread 1"</span>;</span><br><span class="line">     <span class="keyword">char</span> *message2 = <span class="string">"Thread 2"</span>;</span><br><span class="line">     <span class="keyword">int</span>  iret1, iret2;</span><br><span class="line"></span><br><span class="line">    <span class="comment">/* Create independent threads each of which will execute function */</span></span><br><span class="line"></span><br><span class="line">     iret1 = pthread_create( &amp;thread1, <span class="literal">NULL</span>, print_message_function, (<span class="keyword">void</span>*) message1);</span><br><span class="line">     iret2 = pthread_create( &amp;thread2, <span class="literal">NULL</span>, print_message_function, (<span class="keyword">void</span>*) message2);</span><br><span class="line"></span><br><span class="line">     <span class="comment">/* Wait till threads are complete before main continues. Unless we  */</span></span><br><span class="line">     <span class="comment">/* wait we run the risk of executing an exit which will terminate   */</span></span><br><span class="line">     <span class="comment">/* the process and all threads before the threads have completed.   */</span></span><br><span class="line"></span><br><span class="line">     pthread_join( thread1, <span class="literal">NULL</span>);</span><br><span class="line">     pthread_join( thread2, <span class="literal">NULL</span>); </span><br><span class="line"></span><br><span class="line">     <span class="built_in">printf</span>(<span class="string">"Thread 1 returns: %d\n"</span>,iret1);</span><br><span class="line">     <span class="built_in">printf</span>(<span class="string">"Thread 2 returns: %d\n"</span>,iret2);</span><br><span class="line">     <span class="built_in">exit</span>(<span class="number">0</span>);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">void</span> *<span class="title">print_message_function</span><span class="params">( <span class="keyword">void</span> *ptr )</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">     <span class="keyword">char</span> *message;</span><br><span class="line">     message = (<span class="keyword">char</span> *) ptr;</span><br><span class="line">     <span class="built_in">printf</span>(<span class="string">"%s \n"</span>, message);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
 <p>其中<code>pthread_create()</code>API如下</p>
 <figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">pthread_create</span><span class="params">(<span class="keyword">pthread_t</span> * thread, </span></span></span><br><span class="line"><span class="function"><span class="params">                     <span class="keyword">const</span> <span class="keyword">pthread_attr_t</span> * attr,</span></span></span><br><span class="line"><span class="function"><span class="params">                     <span class="keyword">void</span> * (*start_routine)(<span class="keyword">void</span> *), </span></span></span><br><span class="line"><span class="function"><span class="params">                     <span class="keyword">void</span> *arg)</span></span>;</span><br></pre></td></tr></table></figure>
+
 <p><strong>arguments：</strong></p>
 <ul>
 <li><code>thread</code> - returns the thread id. (unsigned long int defined in bits/pthreadtypes.h)</li>
