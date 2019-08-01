@@ -17,7 +17,7 @@
 <meta property="og:image" content="https://raw.githubusercontent.com/Abyssali/blog_images/master/5dab80be0cbe09508391d2dcaca3f2e7.gif">
 <meta property="og:image" content="https://raw.githubusercontent.com/Abyssali/blog_images/master/426f5981d21377ccb00d81f79a05f026.png">
 <meta property="og:image" content="https://raw.githubusercontent.com/Abyssali/blog_images/master/23fa14ade68784deb33cf2319812e97f.png">
-<meta property="og:updated_time" content="2019-08-01T14:33:39.598Z">
+<meta property="og:updated_time" content="2019-08-01T14:39:52.233Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="时序数据库学习笔记">
 <meta name="twitter:description" content="​    在2017年，一种新的类型的数据库突然火了起来——时序数据库。任何事物必有其独特之处，在现有的关系型数据库(Mysql, Orcle)，非关系型数据库(Redis, Es等)已经足够好用的情况下，为什么时序数据库被发明出来(或者说被研发出来呢？)？ 作为一种新兴的数据库，首先它需要回答我们三个问题：  时间序列数据是什么？ 何时需要使用时间序列数据库？ 使用（或不使用）时序数据库的理由是">
@@ -205,6 +205,7 @@
 <li>不能与现在大多数工具何用（糟糕的兼容性）</li>
 <li>要求我们将数据分为两份：一个“常规”的关系型数据库，还有一个时间序列数据库</li>
 </ul>
+<p>​    对于使用哪种时序数据库，需要根据特定的需要来进行选型。</p>
 <h2 id="延伸思考：是否所有的数据都是时间序列数据？"><a href="#延伸思考：是否所有的数据都是时间序列数据？" class="headerlink" title="延伸思考：是否所有的数据都是时间序列数据？"></a>延伸思考：是否所有的数据都是时间序列数据？</h2><p>​    根据摩尔定律，计算能力（晶体管密度）每 18 个月翻一番，而克拉底定律则假定存储容量每 12 个月翻一番。</p>
 <p>​    现在我们不再满足于观察世界状态，想要的更多，我们想度量世界随亚秒级别时间推移的变化。我们的“大数据”数据集现在正被另一种数据超越，这些数据在很大程度上依赖时间来保存正在发生的变化的信息。</p>
 <p>​    但是否所有数据一开始都是时间序列数据？ 回顾我们早期的 Web 应用示例：我们其实已坐拥时间序列数据，只是当时没有意识到。</p>
