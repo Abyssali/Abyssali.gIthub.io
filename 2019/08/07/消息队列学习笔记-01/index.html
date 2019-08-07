@@ -14,7 +14,7 @@
 <meta property="og:site_name" content="Abyssal">
 <meta property="og:description" content="1.消息队列简述​    什么是消息队列？它的作用是什么呢？ —— 问一下万能的Wikipedia ^ ^  ​    在计算机科学中，消息队列和邮箱是用于进程间通信（IPC）或用于同一进程内的线程间通信的软件工程 组件。他们使用队列进行消息传递  - 控制或内容的传递。 ​    消息队列提供 异步 通信协议，这意味着消息的发送方和接收方不需要同时与消息队列交互。 ​    消息队列的许多实现在">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2019-08-07T09:46:20.070Z">
+<meta property="og:updated_time" content="2019-08-07T10:33:29.397Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="消息队列学习笔记-01">
 <meta name="twitter:description" content="1.消息队列简述​    什么是消息队列？它的作用是什么呢？ —— 问一下万能的Wikipedia ^ ^  ​    在计算机科学中，消息队列和邮箱是用于进程间通信（IPC）或用于同一进程内的线程间通信的软件工程 组件。他们使用队列进行消息传递  - 控制或内容的传递。 ​    消息队列提供 异步 通信协议，这意味着消息的发送方和接收方不需要同时与消息队列交互。 ​    消息队列的许多实现在">
@@ -181,21 +181,21 @@
 <li>高可用：支持集群，确保不会因为某个/某些节点宕机导致整个消息队列服务不可用；</li>
 <li>高性能：具备足够好的性能，能够满足绝大部分场景的性能要求。</li>
 </ol>
-<h3 id="主流消息队列实现"><a href="#主流消息队列实现" class="headerlink" title="主流消息队列实现"></a>主流消息队列实现</h3><h4 id="1-RocketMQ"><a href="#1-RocketMQ" class="headerlink" title="1.RocketMQ"></a>1.RocketMQ</h4><p>​    使用Java开发，由阿里巴巴在2012年开源，后捐赠给 <a href="https://www.apache.org/" target="_blank" rel="noopener">Apache Software Foundation</a>，2017正式毕业成为 Apache 的顶级项目 <a href="http://rocketmq.apache.org/" target="_blank" rel="noopener">Apache RocketMQ</a>。阿里内部也是用 RocketMQ 来支撑其业务，多次经历“双十一”考验，它的性能、稳定性、可靠性都是值得信赖的。</p>
+<h3 id="主流消息队列实现"><a href="#主流消息队列实现" class="headerlink" title="主流消息队列实现"></a>主流消息队列实现</h3><h4 id="1-RocketMQ"><a href="#1-RocketMQ" class="headerlink" title="1.RocketMQ"></a>1.<a href="https://rocketmq.apache.org/" target="_blank" rel="noopener">RocketMQ</a></h4><p>​    使用Java开发，由阿里巴巴在2012年开源，后捐赠给 <a href="https://www.apache.org/" target="_blank" rel="noopener">Apache Software Foundation</a>，2017正式毕业成为 Apache 的顶级项目 <a href="http://rocketmq.apache.org/" target="_blank" rel="noopener">Apache RocketMQ</a>。阿里内部也是用 RocketMQ 来支撑其业务，多次经历“双十一”考验，它的性能、稳定性、可靠性都是值得信赖的。</p>
 <p>​    RocketMQ 对在线业务的响应延时做了优化，<strong>如果你的应用场景在意响应延时，那RocketMQ是很好的选择。</strong></p>
-<h4 id="2-RabbitMQ"><a href="#2-RabbitMQ" class="headerlink" title="2.RabbitMQ"></a>2.RabbitMQ</h4><p>​    老牌消息队列，使用Erlang编写，实现了 <a href="https://en.wikipedia.org/wiki/Advanced_Message_Queuing_Protocol" target="_blank" rel="noopener">AMQP</a> 协议，它设计之初是为了电信行业系统间提供可靠通信。</p>
-<p>​    RabbitMQ号称世界上使用最广泛的开源消息队列，使用率是否世界第一无法统计，但它绝对是最流行的消息中间件之一。</p>
-<p>​    RabbitMQ支持多种编程语言，如果你正在使用一种冷门语言而正需要一个消息队列时，它可能是一个非常好的选择。</p>
-<p>​    RabbitMQ 的Slogan —— Messaging that just works，很明确的表明了 RabbitMQ的特点：开箱即用，轻量、迅捷，非常容易部署和使用，灵活的路由配置。</p>
+<h4 id="2-RabbitMQ"><a href="#2-RabbitMQ" class="headerlink" title="2.RabbitMQ"></a>2.<a href="https://www.rabbitmq.com/" target="_blank" rel="noopener">RabbitMQ</a></h4><p>​    <a href="https://www.rabbitmq.com/" target="_blank" rel="noopener">RabbitMQ</a> 是老牌消息队列，使用Erlang编写，实现了 <a href="https://en.wikipedia.org/wiki/Advanced_Message_Queuing_Protocol" target="_blank" rel="noopener">AMQP</a> 协议，它设计之初是为了电信行业系统间提供可靠通信。</p>
+<p>​    RabbitMQ 号称世界上使用最广泛的开源消息队列，使用率是否世界第一无法统计，但它绝对是最流行的消息中间件之一。</p>
+<p>​    RabbitMQ 支持多种编程语言，如果你正在使用一种冷门语言而正需要一个消息队列时，它可能是一个非常好的选择。</p>
+<p>​    RabbitMQ 的 Slogan —— Messaging that just works，很明确的表明了 RabbitMQ 的特点：开箱即用，轻量、迅捷，非常容易部署和使用，灵活的路由配置。</p>
 <p>​    但是RabbitMQ存在如下问题：</p>
 <p>​    第一个问题是，RabbitMQ 对消息堆积支持很不好，因为它的设计理念里面，消息队列是一个管道（pipeline），大量的消息堆积并不是一个正常情况，如果有大量的消息堆积，RabbitMQ的性能会急剧下降。</p>
-<p>​    第二个问题是，RabbitMQ 的性能是介绍的这几种消息队列中最差的，它大概每秒钟可处理几万到十几万条消息，这个性能足够应付大多数场景了，<strong>如果你对性能要求很高，建议不要选用RabbitMQ。</strong></p>
+<p>​    第二个问题是，RabbitMQ 的性能是介绍的这几种消息队列中最差的，它大概每秒钟可处理几万到十几万条消息，这个性能足够应付大多数场景了，<strong>如果你对性能要求很高，建议不要选用 RabbitMQ。</strong></p>
 <p>​    第三个问题是，RabbitMQ 是 Erlang 编写的，这个语言不仅小众而且学习曲线非常陡峭，如果想针对 RabbitMQ 做一些扩展或者二次开发，成本很高。</p>
-<h4 id="3-Kafka"><a href="#3-Kafka" class="headerlink" title="3.Kafka"></a>3.Kafka</h4><p>​    Kafka 最早由 Linkedin 开发，目前也是 Apache 顶级项目，设计之初是为了<strong>处理海量日志</strong>。</p>
+<h4 id="3-Kafka"><a href="#3-Kafka" class="headerlink" title="3.Kafka"></a>3.<a href="https://kafka.apache.org/" target="_blank" rel="noopener">Kafka</a></h4><p>​    <a href="https://kafka.apache.org/" target="_blank" rel="noopener">Kafka</a> 最早由 Linkedin 开发，目前也是 Apache 顶级项目，设计之初是为了<strong>处理海量日志</strong>。</p>
 <p>​    Kafka 的早期版本，为了性能在设计方面牺牲了可靠性与集群等，这些牺牲对于处理海量日志这个特定场景是可以接受的，随后的几年里，Kafka 逐渐补齐了这些短板，<strong>当下的 Kafka 已经是一个非常成熟的消息队列产品，无论是数据的可靠性、稳定性和功能特性方面都可以满足大多数场景</strong>。</p>
 <p>​    <strong>Kafka 与周边生态的兼容性是最好的没有之一，尤其是在大数据和流计算领域，几乎所有的相关开源软件系统都会优先支持Kafka。</strong></p>
-<p>​    Kafka 使用 Scala 和 Java 开发，设计上大量使用了<strong>批量</strong>和<strong>异步</strong>的思想，这种设计使得 kafka能做到极致的性能。Kafka的性能，尤其是异步收发，是三者中最好的。但是 Kafka这种异步批量的设计带来的<strong>副作用</strong>是：它的同步收发消息的响应延迟比较高，因为Kafka的很多地方都是<strong>“攒一波再一起处理”</strong>的设计，所以 <strong>Kafka不太适合在线低延迟的业务场景。</strong></p>
-<h4 id="4-Pulsar"><a href="#4-Pulsar" class="headerlink" title="4.Pulsar"></a>4.Pulsar</h4><p>​    是一个新兴的开源消息队列产品，最早由Yahoo 开发，目前还在成长期，流行度和成熟度不高，与其他消息队列最大的不同之处在于 Pulsar 采用了存储和计算分离的设计，它有可能会引领未来消息队列的一个发展方向，建议关注。</p>
+<p>​    Kafka 使用 Scala 和 Java 开发，设计上大量使用了<strong>批量</strong>和<strong>异步</strong>的思想，这种设计使得 kafka 能做到极致的性能。Kafka的性能，尤其是异步收发，是三者中最好的。但是 Kafka 这种异步批量的设计带来的<strong>副作用</strong>是：它的同步收发消息的响应延迟比较高，因为Kafka的很多地方都是<strong>“攒一波再一起处理”</strong>的设计，所以 <strong>Kafka 不太适合在线低延迟的业务场景。</strong></p>
+<h4 id="4-Pulsar"><a href="#4-Pulsar" class="headerlink" title="4.Pulsar"></a>4.<a href="https://pulsar.apache.org/" target="_blank" rel="noopener">Pulsar</a></h4><p>​    <a href="https://pulsar.apache.org/" target="_blank" rel="noopener">Pulsar</a> 是一个新兴的开源消息队列产品，最早由 Yahoo 开发，目前还在成长期，流行度和成熟度不高，与其他消息队列最大的不同之处在于 Pulsar 采用了存储和计算分离的设计，它有可能会引领未来消息队列的一个发展方向，建议关注。</p>
 <h4 id="5-其他选择"><a href="#5-其他选择" class="headerlink" title="5.其他选择"></a>5.其他选择</h4><p>​    ActiveMQ：最老牌的消息队列，与现代消息队列差距明显，唯一用处：兼容老系统。</p>
 <p>​    ZeroMQ：严格说它并不能称为消息队列，它是一个基于消息队列的多线程网络库。</p>
 
